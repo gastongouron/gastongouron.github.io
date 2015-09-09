@@ -1,11 +1,15 @@
+/** Styles for a sexyer main container **/
 main, .main {
   position:absolute;
-  width: 960px;
+  width: 800px;
   font-family: sans-serif;
   color: #2A2A2A;
   padding-left:20px;
   padding-right:20px;
+  line-height: 1.32311em;
 }
+
+/** Week & date color **/
 h4, .h4 {
   color: #696969;
 }
