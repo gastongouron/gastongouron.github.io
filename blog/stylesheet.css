@@ -1,0 +1,47 @@
+/** Styles for a sexyer main container **/
+main {
+  position:absolute;
+  width:100%;
+  font-family: sans-serif;
+  color: #424242;
+  padding-left:20px;
+  padding-right:20px;
+  line-height: 1.4733em;
+}
+/** h1 Post title style**/
+h1 {
+  font-size:44px;
+}
+
+/** h4 Week & date style**/
+h4 {
+  font-family: monospace;
+  font-weight:normal;
+  color:#FFFFFF;
+  background-color:#e3734e;
+  display: inline;
+  padding:5px;
+  border-radius: 5px;
+}
+
+/** Section size reduced to 80% for better readability **/
+section, hr {
+width:70%;
+float:left;
+}
+
+/** Custom link style **/
+a {
+color:#4078c0;
+text-decoration: none;
+}
+
+/** Options for the icon **/
+.heraldIcon {
+float: right;
+position: fixed;
+right: 10px;
+top: 10px;
+z-index: 100;
+}
+
