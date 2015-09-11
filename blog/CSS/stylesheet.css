@@ -1,14 +1,16 @@
-/** Styles for a sexyer main container **/
+/** Styles for a grey-background bodycontainer **/
 body {
   background-color: #F3F3F3;
   padding: 0px;
-      margin:auto;
-    position:relative;
-    top:-8px;
-    left:-8px;
-    right:-8px;
-    bottom:-12px;
+  margin:auto;
+  position:relative;
+  top:-8px;
+  left:-8px;
+  right:-8px;
+  bottom:-12px;
 }
+
+/** styling main container so it remains centered and white **/
 main {
   background-color: #FFFFFF;
   position:inherit;
@@ -20,13 +22,14 @@ main {
   padding-right:30px;
   line-height: 1.566em;
 }
-/** h1 Post title style**/
+
+/** h1 Post title style **/
 h1 {
   font-size:44px;
   padding-top: 10px;
 }
 
-/** h4 Week & date style**/
+/** h4 Week & date style **/
 h4 {
   font-family: monospace;
   font-weight:normal;
@@ -37,82 +40,83 @@ h4 {
   border-radius: 5px;
 }
 
+/** h3 questions style **/
 h3 {
   margin-top:28px;
   margin-bottom:8px;
 }
 
-/** Section size reduced to 80% for better readability **/
-
 /** Custom link style **/
 a {
-color:#4078c0;
-text-decoration: none;
+  color:#4078c0;
+  text-decoration: none;
 }
 
-/** Options for the icon **/
+/** Options for floating the icon **/
 #heraldIcon {
-float: right;
-position: fixed;
-line-height: 0.96em;
-height:30px;
-width:30px;
-right: 24px;
-top: 24px;
-z-index: 100;
-font-family: 'UnifrakturMaguntia', serif;
-font-size: 40px;
-color:#424242;
-text-decoration: none;
-background-color: #FFFFFF;
-padding: 30px;
-border-radius: 50%;
--webkit-transition: color 0.2s;
--moz-transition: color 0.2s;
--o-transition: color 0.2s;
-transition: color 0.2s;
+  float: right;
+  position: fixed;
+  line-height: 0.96em;
+  height:30px;
+  width:30px;
+  right: 24px;
+  top: 24px;
+  z-index: 100;
+  font-family: 'UnifrakturMaguntia', serif;
+  font-size: 40px;
+  color:#424242;
+  text-decoration: none;
+  background-color: #FFFFFF;
+  padding: 30px;
+  border-radius: 50%;
+  -webkit-transition: color 0.2s;
+  -moz-transition: color 0.2s;
+  -o-transition: color 0.2s;
+  transition: color 0.2s;
 }
 
+/** Options when hovered **/
 #heraldIcon:hover {
-float: right;
-position: fixed;
-line-height: 0.96em;
-height:30px;
-width:30px;
-right: 24px;
-top: 24px;
-z-index: 100;
-font-family: 'UnifrakturMaguntia', serif;
-font-size: 40px;
-color:#e3734e;
-background-color: #FFFFFF;
-text-decoration: none;
-padding: 30px;
-border-radius: 50%;
--webkit-transition: color 0.2s;
--moz-transition: color 0.2s;
--o-transition: color 0.2s;
-transition: color 0.2s;
+  float: right;
+  position: fixed;
+  line-height: 0.96em;
+  height:30px;
+  width:30px;
+  right: 24px;
+  top: 24px;
+  z-index: 100;
+  font-family: 'UnifrakturMaguntia', serif;
+  font-size: 40px;
+  color:#e3734e;
+  background-color: #FFFFFF;
+  text-decoration: none;
+  padding: 30px;
+  border-radius: 50%;
+  -webkit-transition: color 0.2s;
+  -moz-transition: color 0.2s;
+  -o-transition: color 0.2s;
+  transition: color 0.2s;
 }
 
+/** Options when clicked the icon **/
 #heraldIcon:active {
-float: right;
-position: fixed;
-line-height: 0.96em;
-height:30px;
-width:30px;
-right: 24px;
-top: 24px;
-z-index: 100;
-font-family: 'UnifrakturMaguntia', serif;
-font-size: 40px;
-color:#F3F3F3;
-text-decoration: none;
-background-color: #FFFFFF;
-padding: 30px;
-border-radius: 50%;
--webkit-transition: color 0.2s;
--moz-transition: color 0.2s;
--o-transition: color 0.2s;
-transition: color 0.2s;
+  float: right;
+  position: fixed;
+  line-height: 0.96em;
+  height:30px;
+  width:30px;
+  right: 24px;
+  top: 24px;
+  z-index: 100;
+  font-family: 'UnifrakturMaguntia', serif;
+  font-size: 40px;
+  color:#F3F3F3;
+  text-decoration: none;
+  background-color: #FFFFFF;
+  padding: 30px;
+  border-radius: 50%;
+  -webkit-transition: color 0.2s;
+  -moz-transition: color 0.2s;
+  -o-transition: color 0.2s;
+  transition: color 0.2s;
 }
