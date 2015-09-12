@@ -5,9 +5,8 @@ body {
   margin:auto;
   position:relative;
   top:-8px;
-  left:-8px;
-  right:-8px;
-  bottom:-12px;
+  font-size: 1.166rem;
+  font-family: Roboto;
 }
 
 /** styling main container so it remains centered and white **/
@@ -16,36 +15,47 @@ main {
   position:inherit;
   max-width: 640px;
   margin:0 auto;
-  font-family: sans-serif;
   color: #424242;
-  padding-left:30px;
-  padding-right:30px;
-  line-height: 1.566em;
+  padding-left:200px;
+  padding-right:200px;
+  line-height: 1.666em;
+  padding-top: 25px;
 }
 
 /** h1 Post title style **/
 h1 {
-  font-size:44px;
-  padding-top: 10px;
+  font-size:50px;
+  font-weight: 900;
+}
+
+/** h1 Post sub-title style **/
+h2 {
+  font-size:30px;
+  font-weight: 700;
+}
+
+
+/** h3 questions style **/
+h3 {
+  margin-top:28px;
+  margin-bottom:8px;
+  font-weight: 500;
 }
 
 /** h4 Week & date style **/
 h4 {
   font-family: monospace;
   font-weight:normal;
-  color:#FFFFFF;
-  background-color:#e3734e;
+  color:#424242;
+  background-color: #F3F3F3;
   display: inline;
   padding:5px;
   border-radius: 5px;
 }
 
-/** h3 questions style **/
-h3 {
-  margin-top:28px;
-  margin-bottom:8px;
+p {
+  font-weight: 300;
 }
-
 /** Custom link style **/
 a {
   color:#4078c0;
