@@ -16,8 +16,8 @@ main {
   max-width: 640px;
   margin:0 auto;
   color: #424242;
-  padding-left:200px;
-  padding-right:200px;
+  padding-left:10%;
+  padding-right:10%;
   line-height: 1.666em;
   padding-top: 25px;
 }
@@ -26,6 +26,7 @@ main {
 h1 {
   font-size:55px;
   font-weight: 900;
+  line-height: 1em;
 }
 
 /** h1 Post sub-title style **/
