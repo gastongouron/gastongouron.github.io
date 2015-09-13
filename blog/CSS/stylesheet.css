@@ -37,7 +37,6 @@ h2 {
   font-weight: 700;
 }
 
-
 /** h3 questions style **/
 h3 {
   margin-top:28px;
@@ -59,8 +58,8 @@ h4 {
 p {
   font-weight: 300;
 }
-/** Custom link style **/
 
+/** Custom link style and animation on hover**/
 a {
   color:#424242;
   font-weight: 500;
@@ -78,82 +77,13 @@ a:hover {
     background-position: 100% 0;
     background-size: 200% 200%;
     color: transparent;
-    -webkit-transition: .1s .1s;
+    -webkit-transition: .01s .01s;
     -webkit-background-clip: text;
   }
 
   a:hover {
     background-position: 0 0;
     color: transparent;
-    transition: .1s 0;
+    transition: .01s 0;
   }
-}
-
-/** Options for floating the icon **/
-#heraldIcon {
-  float: right;
-  position: fixed;
-  line-height: 0.96em;
-  height:30px;
-  width:30px;
-  right: 24px;
-  top: 24px;
-  z-index: 100;
-  font-family: 'UnifrakturMaguntia', serif;
-  font-size: 40px;
-  color:#424242;
-  text-decoration: none;
-  background-color: #FFFFFF;
-  padding: 30px;
-  border-radius: 50%;
-  -webkit-transition: color 0.2s;
-  -moz-transition: color 0.2s;
-  -o-transition: color 0.2s;
-  transition: color 0.2s;
-}
-
-/** Options when hovered **/
-#heraldIcon:hover {
-  float: right;
-  position: fixed;
-  line-height: 0.96em;
-  height:30px;
-  width:30px;
-  right: 24px;
-  top: 24px;
-  z-index: 100;
-  font-family: 'UnifrakturMaguntia', serif;
-  font-size: 40px;
-  color:#e3734e;
-  background-color: #FFFFFF;
-  text-decoration: none;
-  padding: 30px;
-  border-radius: 50%;
-  -webkit-transition: color 0.2s;
-  -moz-transition: color 0.2s;
-  -o-transition: color 0.2s;
-  transition: color 0.2s;
-}
-
-/** Options when clicked the icon **/
-#heraldIcon:active {
-  float: right;
-  position: fixed;
-  line-height: 0.96em;
-  height:30px;
-  width:30px;
-  right: 24px;
-  top: 24px;
-  z-index: 100;
-  font-family: 'UnifrakturMaguntia', serif;
-  font-size: 40px;
-  color:#F3F3F3;
-  text-decoration: none;
-  background-color: #FFFFFF;
-  padding: 30px;
-  border-radius: 50%;
-  -webkit-transition: color 0.2s;
-  -moz-transition: color 0.2s;
-  -o-transition: color 0.2s;
-  transition: color 0.2s;
 }
