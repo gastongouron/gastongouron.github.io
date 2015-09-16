@@ -1,0 +1,61 @@
+/* You'll want to make the site responsive and nice looking here. Have fun!*/
+
+#wrapper {
+  text-align: left;
+  margin: 0px auto;
+  padding: 10 10 10 10;
+  border:0;
+  width: 100%;
+  background: url("http://cdn.elegantthemes.com/blog/wp-content/uploads/2013/09/bg-6-full.jpg") repeat;
+  color:black;
+  font-size: 2em;
+}
+
+#side-a ul{
+  list-style-type:none;
+}
+
+a {
+  color:black;
+}
+img {
+ width:80%;
+ display: block;
+ margin-right: auto;
+ margin-left: auto;
+}
+#header {
+  text-align: center;
+  margin: 0 0 0 0;
+  background: black;
+  color: white;
+}
+
+#side-a {
+padding:30px;
+text-align: center;
+}
+
+#side-a li{
+  padding-top: 20px;
+}
+
+#side-b {
+  float: right;
+  width: 150px;
+}
+
+#content, .reflection {
+  font-size: 40px;
+  width: 80%;
+   display: block;
+ margin-right: auto;
+ margin-left: auto;
+}
+
+#footer {
+  margin-bottom: 20px;
+  text-align: center;
+  clear: both;
+  background: #A2A2A2;
+}
