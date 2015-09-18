@@ -15,7 +15,11 @@ padding-bottom:20px;
 }
 
 img {
-  width:100%;
+    display: block;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px;
 }
 
 /** styling main container so it remains centered and white **/
@@ -44,6 +48,7 @@ h2 {
   margin-top:5px;
   font-size:33px;
   font-weight: 700;
+  line-height: 1em;
 }
 
 /** h3 questions style **/
@@ -73,26 +78,18 @@ a {
   color:#424242;
   font-weight: 500;
   -webkit-transition: .1s;
+  text-decoration: none;
 }
 
 a:hover {
-  color: hotPink;
+  color: #000;
+  background-color: #FCE200;
+  text-decoration: none;
+  border-radius: 4px;
+  padding-bottom: 1px;
+  padding-top: 3px;
+  padding-right: 3px;
+  padding-left: 3px;
+
 }
 
-@media (-webkit-min-device-pixel-ratio:0) {
-  a {
-    background-color: #424242;
-    background-image: -webkit-linear-gradient(left, hotPink 0%, orange 50%, transparent 50%);
-    background-position: 100% 0;
-    background-size: 200% 200%;
-    color: transparent;
-    -webkit-transition: .01s .01s;
-    -webkit-background-clip: text;
-  }
-
-  a:hover {
-    background-position: 0 0;
-    color: transparent;
-    transition: .01s 0;
-  }
-}
