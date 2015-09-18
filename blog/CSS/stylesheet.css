@@ -13,6 +13,11 @@ header {
 padding-top:26px;
 padding-bottom:20px;
 }
+
+img {
+  width:100%;
+}
+
 /** styling main container so it remains centered and white **/
 main {
   background-color: #FFFFFF;
