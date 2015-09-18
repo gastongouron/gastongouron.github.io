@@ -1,6 +1,7 @@
 /** Styles for a grey-background bodycontainer **/
 body {
-  background-color: #F3F3F3;
+
+  background: url("neutral.png") repeat;
   padding: 0px;
   margin:auto;
   position:relative;
@@ -16,7 +17,7 @@ padding-bottom:20px;
 
 img {
     display: block;
-    width: 90%;
+    width: 80%;
     margin-left: auto;
     margin-right: auto;
     padding: 10px;
@@ -29,8 +30,8 @@ main {
   max-width: 640px;
   margin:0 auto;
   color: #424242;
-  padding-left:10%;
-  padding-right:10%;
+  padding-left:8%;
+  padding-right:8%;
   line-height: 1.666em;
   padding-top: 25px;
 }
@@ -63,7 +64,7 @@ h4 {
   font-family: monospace;
   font-weight:normal;
   color:#424242;
-  background-color: #F3F3F3;
+  background: url("neutral.png") repeat;
   display: inline;
   padding:5px;
   border-radius: 5px;
