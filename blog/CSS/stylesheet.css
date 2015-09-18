@@ -9,6 +9,10 @@ body {
   font-family: Roboto;
 }
 
+header {
+padding-top:26px;
+padding-bottom:20px;
+}
 /** styling main container so it remains centered and white **/
 main {
   background-color: #FFFFFF;
@@ -32,7 +36,7 @@ h1 {
 
 /** h1 Post sub-title style **/
 h2 {
-  margin: 0,3em;
+  margin-top:5px;
   font-size:33px;
   font-weight: 700;
 }
