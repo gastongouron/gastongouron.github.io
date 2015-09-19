@@ -8,17 +8,22 @@ body {
   font-family: Roboto;
 }
 
-
+nav {
+    background-color:white;
+    margin-top:20px;
+    font-size: 1em;
+    font-weight: 300;
+}
 
 img {
     display: block;
-    width: 80%;
+    width: 90%;
     margin-left: auto;
     margin-right: auto;
     padding: 10px;
+    border-radius: 15px;
 }
 
-/** styling main container so it remains centered and white **/
 main {
   position:inherit;
   max-width: 640px;
@@ -30,8 +35,6 @@ main {
 
 }
 
-
-/** h1 Post title style **/
 h1 {
   margin-bottom: 0em;
   font-size:50px;
@@ -64,11 +67,6 @@ h4 {
   display: inline;
   padding:5px;
   border-radius: 5px;
-  background: url("neutral.png") repeat;
-}
-
-.neutral {
-  background: url("neutral.png") repeat;
 }
 
 p {
@@ -83,20 +81,17 @@ a {
   text-decoration: none;
 }
 
-.indexTitle {
-margin-left:20px;
-text-align: left;
-}
-
-
 a:hover {
   color: #000;
   text-decoration: none;
   border-radius: 4px;
-//*  padding-bottom: 1px;
+//*
+  padding-bottom: 1px;
   padding-top: 3px;
   padding-right: 3px;
-  padding-left: 3px; **/
+  padding-left: 3px;
+  background-color:#000;
+  **/
 
 }
 
@@ -108,7 +103,6 @@ hr {
 article {
   padding-right:20px;
   padding-left:20px;
-
 }
 
 .articleEntry {
@@ -117,7 +111,6 @@ article {
 
 .articleItem:hover {
   color:#424242;
-
   background-color:#FCE200;
   border-radius: 14px;
   transition: 0.5s;
@@ -133,27 +126,16 @@ article {
   transition: 1.2s;
 }
 
-nav {
-    background-color:white;
-    margin-top:20px;
-    font-size: 1em;
-    font-weight: 300;
+.neutral {
+  background: url("neutral.png") repeat;
 }
 
 .white {
   background-color:white;
 }
 
-aside {
-  z-index: 2;
-width:100%;
-  float:left;
-  right: 0;
-  position: fixed;
-}
-
-.listEntry {
-font-weight:normal;
+.indexInfo{
+padding-left:20px
 }
 
 .contents {
