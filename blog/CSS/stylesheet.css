@@ -1,4 +1,4 @@
-/** Styles for a grey-background bodycontainer **/
+/* Page body */
 body {
   padding: 0px;
   margin:auto;
@@ -8,13 +8,14 @@ body {
   font-family: Roboto;
 }
 
+/* Navigation menu */
 nav {
-    background-color:white;
     margin-top:20px;
     font-size: 1em;
     font-weight: 300;
 }
 
+/* Responsive image with border radius */
 img {
     display: block;
     width: 90%;
@@ -24,6 +25,7 @@ img {
     border-radius: 15px;
 }
 
+/* Main for max width */
 main {
   position:inherit;
   max-width: 640px;
@@ -35,6 +37,7 @@ main {
 
 }
 
+/** Post title **/
 h1 {
   margin-bottom: 0em;
   font-size:50px;
@@ -44,7 +47,7 @@ h1 {
   -webkit-margin-after: 0.2em;
 }
 
-/** h1 Post sub-title style **/
+/** Post sub-title **/
 h2 {
   margin-top:5px;
   font-size:33px;
@@ -52,14 +55,14 @@ h2 {
   line-height: 1em;
 }
 
-/** h3 questions style **/
+/** Questions **/
 h3 {
   margin-top:28px;
   margin-bottom:8px;
   font-weight: 500;
 }
 
-/** h4 Week & date style **/
+/** Week & date style **/
 h4 {
   font-family: monospace;
   font-weight:normal;
@@ -69,11 +72,12 @@ h4 {
   border-radius: 5px;
 }
 
+/** Paragraph **/
 p {
   font-weight: 300;
 }
 
-/** Custom link style and animation on hover**/
+/** Links **/
 a {
   color:#424242;
   font-weight: 500;
@@ -81,11 +85,12 @@ a {
   text-decoration: none;
 }
 
+/** Custom link style and animation on hover **/
 a:hover {
   color: #000;
   text-decoration: none;
   border-radius: 4px;
-//*
+  /*
   padding-bottom: 1px;
   padding-top: 3px;
   padding-right: 3px;
@@ -95,20 +100,24 @@ a:hover {
 
 }
 
+/** Separation line **/
 hr {
   border: 2;
   width: 92.5%;
 }
 
+/** Used on all articles **/
 article {
   padding-right:20px;
   padding-left:20px;
 }
 
+/** Used on index menu for hover padding **/
 .articleEntry {
-    padding:22px;
+  padding:22px;
 }
 
+/** Over effect **/
 .articleItem:hover {
   color:#424242;
   background-color:#FCE200;
@@ -116,24 +125,29 @@ article {
   transition: 0.5s;
 }
 
+/** Custom link style and animation on hover **/
 .wrapper {
   color: #424242;
 }
 
+/** Custom link style and animation on hover for date**/
 .articleItem:hover .wrapper,
 .articleItem:hover ~ .wrapper {
   background: #FFF;
-  transition: 1.2s;
+  transition: 0.7s;
 }
 
+/** Neutral background **/
 .neutral {
   background: url("neutral.png") repeat;
 }
 
+/** White background **/
 .white {
   background-color:white;
 }
 
+/** Classes below have to be integrated more smartly **/
 .indexInfo{
 padding-left:20px
 }
