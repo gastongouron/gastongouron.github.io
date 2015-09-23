@@ -74,7 +74,13 @@ h4 {
 
 /** Paragraph **/
 p {
-  font-weight: 300;
+    font-size: 0.9em;
+    line-height: 1.6em;
+    font-weight: 300;
+    -webkit-margin-before: 0em;
+    -webkit-margin-after: 0em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
 }
 
 /** Links **/
@@ -102,8 +108,10 @@ a:hover {
 
 /** Separation line **/
 hr {
-  border: 2;
-  width: 92.5%;
+
+    margin: 1em 1em;
+    border: solid #ddd;
+    border-width: 2px 0 0;
 }
 
 /** Used on all articles **/
@@ -121,7 +129,7 @@ article {
 .articleItem:hover {
   color:#424242;
   background-color:#FCE200;
-  border-radius: 14px;
+  border-radius: 10px;
   transition: 0.5s;
 }
 
@@ -156,3 +164,13 @@ padding-left:20px
   padding-top:60px;
 }
 
+/** Yellow selection yay! **/
+::-moz-selection {
+    background: #FCE200;
+    text-shadow: none;
+}
+
+::selection {
+    background: #FCE200;
+    text-shadow: none;
+}

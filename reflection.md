@@ -42,7 +42,7 @@ overflow: [visible (the default), hidden, scroll, auto, inherit]
 CSS positioning can seem tough on the first look. But once you start working with it, you will find that you often use the same kinds of positionnings, more over, with a grid system (some table, flex and @media properties in order to adapt to screen size modification) you will be able to go kind of further in terms of design and responsiveness. Also, using overflow on certain sections (and some other CSS tricks) you will be abble to enhance the user experience on your website.
 
 #### What aspects of your design did you find easiest to implement? What was most difficult?
-**The easiest:** My Layout was quite simple by the way so everything went good on implementation.
+**The easiest:** My Layout was quite simple by the way so everything went good during the implementation.
 
 **The most difficult:**
 The details, fine tuning typography and elements's animations durations to have a fluid experience when hovering menu items, was not so easy. Not using bootstrap was also a funny part of the challenge because it forced me to build my own CSS rules `em` instead of `px` and grid system using `@media` and `table`!
