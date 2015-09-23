@@ -9,7 +9,7 @@ In CSS, you can define 3 different properties for your elements borders and thos
 
 **2. The margin property (outside the div):** define the space around elements.
 
-**3. The border property(of the div itself):** defines the style, size, and color of an element's border.
+**3. The border property (of the div itself):** defines the style, size, and color of an element's border.
 
 #### What did you learn about CSS positioning?
 I learnt that positionning can be made few different ways depending on what you need:
@@ -48,4 +48,5 @@ CSS positioning can seem tough on the first look. But once you start working wit
 The details, fine tuning typography and elements's animations durations to have a fluid experience when hovering menu items, was not so easy. Not using bootstrap was also a funny part of the challenge because it forced me to build my own CSS rules `em` instead of `px` and grid system using `@media` and `table`!
 
 #### What did you learn about adding and formatting elements with CSS in this challenge?
-Formatting elements requires skill and practice. It's very important to understand the principles of specificity, cascade and inherence. I learnt how to use more relationships in my CSS in order to have specific CSS applied to certain elements. Also I learnt that naming conventions are really important when creating your own css because you will have to deal with those names a lot!
+Formatting elements requires skill and practice. It's very important to understand the principles of specificity, cascade and inherence.
+I learnt how to use more relationships and combinations in my CSS in order to have specific CSS applied to certain elements. Hence I learnt that naming conventions of css elements are really important when creating your own css because you will have to continually re-work your site so, I'll probably consider starting to use [Emmet](https://www.emmet.io) ones. An other thing I learned is about Sass, I can't wait to start working with it and since I'm planning to use it on my site I'm actually reading some informations about it.
