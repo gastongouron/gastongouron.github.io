@@ -3,7 +3,7 @@
 http://gastongouron.github.io/index.html
 
 #### What did you learn about CSS padding, borders, and margin by doing this challenge?
-In CSS, you can define 3 different properties for your elements borders and those will affect the way they display:
+In CSS, you can define 3 different properties for your elements borders and those will affect the way elements contained inside the div will display comparend to thei parents and the behaviour of their children:
 
 **The padding property (inside the div):** define the space between the element border and the element content
 
@@ -20,14 +20,26 @@ position: static;
 /** This value is very similar to position:static, with one vital difference: While a rendered element does get the width and height of the element, it doesn’t have to occupy the space designated for it. **/
 position: relative;
 
+/** An element with position:absolute is removed from the document flow, which means the rest of the document acts as if the element weren't there. **/
 position: absolute;
+
+/** Elements with fixed positioning don't move. For example, pages with fixed navigation schemes generally use fixed **/
 position: fixed;
+
+/** Descendant elements **/
 position: inherit;
 
-/** extra properties: top right bottom left **/
-z-index:
+/** extra properties for positionning are **/
+position: top right bottom left
+
+/** Placing elements on the first plan or on the background, be careful with this one**/
+z-index: [positive or negative value]
+
+/** The default behavior is to make the overflowing content visible, but it can be changed so that the content is clipped to the confines of the element’s box, optionally providing a mechanism for scrolling the content. **/
+overflow: [visible (the default), hidden, scroll, auto, inherit]
 ```
-CSS positioning can look tough on the first look. but once you start working with a grid system and some flex property and @media properties in order to adapt to screen size modification you can go kind of further in terms of responsiveness.
+
+CSS positioning can seem tough on the first look. But once you start working with it, you will find that you often use the same kinds of positionnings, more over, with a grid system (some table, flex and @media properties in order to adapt to screen size modification) you will be able to go kind of further in terms of design and responsiveness. Also, using overflow on certain sections (and some other CSS tricks) you will be abble to enhance the user experience on your website.
 
 #### What aspects of your design did you find easiest to implement? What was most difficult?
 The easiest: My Layout was quite simple by the way so everything was easy to implement.
