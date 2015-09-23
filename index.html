@@ -1,85 +1,179 @@
-<!DOCTYPE html>
-<html lang="en">
-
+<!doctype html>
+<html>
 <head>
-  <meta charset="utf-8">
-  <title>Paul Gaston Gouron</title>
-  <meta name="My gitHub website" content="GASTONS'STUFF">
-  <meta name="Paul Gaston Gouron" content="gastongouron">
-  <link rel="stylesheet" href="#">
-  <link rel="icon" href="images/heraldIcon.png" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="">
+    <link rel="icon" href="./imgs/favicon.png">
+    <title>Paul Gaston Gouron</title>
+    <link rel="stylesheet" href="./stylesheets/default.css">
+    <!-- This is Font Awesome, not shitty bootstrap! -->
+    <link rel="stylesheet" href="./stylesheets/font-awesome.css">
+    <!-- Roboto <3 -->
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,300italic,300,100italic,100,400italic,500,500italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
 </head>
 
 <body>
   <main>
-    <header>
-      <!-- My picture and name with big letters-->
-      <img src="#" alt="#" class="profil">
-      <h1>Paul Gaston</h1>
 
-      <!-- Menu -->
-      <span class="menu">
-        <a href="#" class="menuItem">Blog</a>
-        <a href="#" class="menuItem">Twitter</a>
-        <a href="#" class="menuItem">Github</a>
-        <a href="#" class="menuItem">Contact</a>
-        <a href="#" class="menuItem">Resume</a>
-      </span>
-      <br>
-      <br>
+    <!-- Header -->
+    <header class="header">
+        <img src="./imgs/profil.png" alt="" id="fade" class="circle profil">
+        <h1>Paul Gaston</h1>
 
-      <!-- Description -->
-      <article class="description">
-        <h3>As dem nist, tem rersperrovid que veliquae. Nam, sandam fuga. Et derro doles eum rem fuga. Em faccuscia vendae nem. Nequibus corerfe raturepudam, et ut ma nonseque
-          nosaperatur soleseq uistia seque alic tem quae nosam sunt rem. Nam, quatur, as sit
-          a nem et volescilles eium dempore perist ut aribusaperro od moluptatem non eum.</h3>
-        </article>
+        <!-- Menu -->
+        <p>
+            <a href="./blog/index.html" target="_blank" class="">Blog</a>&nbsp;&nbsp;
+            <a href="https://twitter.com/gastongouron" target="_blank" class="">Twitter</a>&nbsp;&nbsp;
+            <a href="https://github.com/gastongouron" target="blank" class="">Github</a>&nbsp;&nbsp;
+            <a href="mailto:gastongouron@gmail.com?Subject=Hello%20!" target="_top" class="">Contact</a>&nbsp;&nbsp;
+            <a href="./resume/resume.txt" download>Resume</a>
+        </p>
         <br>
-      </header>
-     <hr>
+        <h2 style="max-width:780px">Paul Gaston Gouron is a designer/developer specializing in typography, front-end architecture and modular design systems, with an emphasis on heuristics, user-centered design, and collaborative design processes.<br>
+        Based in Paris, Fra.</h2>
+    </header><hr>
 
-      <!-- Main project list div -->
-      <section class="mainProjectList">
-        <article class="mainProject">
-          <img class="mainProjectImage" src="./imgs/cat.png" height="104" width="104" alt="#">
-          <h2><a class="projectLink" href="./responsive-design/index.html">Responsive?</a></h2>
-          <h4>Practicing with CSS</h4>
-        </article>
-        <article class="mainProject">
-          <img class="mainProjectImage" src="#" height="104" width="104" alt="#">
-          <h2><a class="projectLink" href="#">Another project</a></h2>
-          <h4>A short description</h4>
-        </article>
-      </section>
-      <hr>
+    <!-- One row = 3 projects -->
+    <div class="row">
 
-      <!-- Secondary project list div -->
-      <section class="secondaryProjectList">
-        <article class="secondaryProject">
-          <h2>Secondary projects' title</h2>
-          <h4>A short description</h4>
-        </article>
-        <article class="secondaryProject">
-          <h2>Secondary projects' title</h2>
-          <h4>A short description</h4>
-        </article>
-      </section>
-      <hr>
+        <!-- Project: Responsive! -->
+        <div class="col main">
+            <div>
+                <i class="fa fa-picture-o fa-4x project-icon"></i>
+            </div>
+            <div class="project-title">
+                <a class="" href="./responsive-design/index.html">
+                <h3>Responsive!</h3></a>
+                <br><p>HTML/CSS</p>
+            </div>
+        </div>
 
-      <!-- footer -->
-      <footer>
-        <span class="footerLeft"><a href="#">Paul Gaston</a></span>
-        <span class="footerRight">
-          <a href="#" class="">Blog</a>
-          <a href="#" class="">Twitter</a>
-          <a href="#" class="">Github</a>
-          <a href="#" class="">Contact</a>
-          <a href="#" class="">Resume</a>
-        </span>
-      </footer>
-    </main>
-    <!-- if scripts -->
-    <script>
-    </script>
-  </body>
-  </html>
+        <!-- Project 2 -->
+        <div class="col main">
+            <div>
+                <i class="fa fa-picture-o fa-4x project-icon"></i>
+            </div>
+            <div class="project-title">
+                <a class="" href="#">
+                <h3>Project n°2</h3></a><br><p>Description</p>
+            </div>
+        </div>
+
+         <!-- Project 3 -->
+        <div class="col main">
+            <div>
+                <i class="fa fa-picture-o fa-4x project-icon"></i>
+            </div>
+            <div class="project-title">
+                <a class="" href="#">
+                <h3>Project n°3</h3></a><br><p>Description</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Row 2 -->
+    <div class="row">
+
+        <!-- Project 4 -->
+        <div class="col main">
+            <div>
+                <i class="fa fa-picture-o fa-4x project-icon"></i>
+            </div>
+            <div class="project-title">
+                <a class="" href="#">
+                <h3>Project n°4</h3></a><br><p>Description</p>
+            </div>
+        </div>
+
+        <!-- Project 5 -->
+        <div class="col main">
+            <div>
+                <i class="fa fa-picture-o fa-4x project-icon"></i>
+            </div>
+            <div class="project-title">
+                <a class="" href="#">
+                <h3>Project n°5</h3></a><br><p>Description</p>
+            </div>
+        </div>
+
+         <!-- Project § -->
+        <div class="col main">
+            <div>
+                <i class="fa fa-picture-o fa-4x project-icon"></i>
+            </div>
+            <div class="project-title">
+                <a class="" href="#">
+                <h3>Project n°6</h3></a><br><p>Description</p>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Row 3 -->
+    <div class="row">
+
+        <!-- Project 4 -->
+        <div class="col main">
+            <div>
+                <i class="fa fa-picture-o fa-4x project-icon"></i>
+            </div>
+            <div class="project-title">
+                <a class="" href="#">
+                <h3>Project n°7</h3></a><br><p>Description</p>
+            </div>
+        </div>
+
+        <!-- Project 5 -->
+        <div class="col main">
+            <div>
+                <i class="fa fa-picture-o fa-4x project-icon"></i>
+            </div>
+            <div class="project-title">
+                <a class="" href="#">
+                <h3>Project n°8</h3></a><br><p>Description</p>
+            </div>
+        </div>
+
+         <!-- Project § -->
+        <div class="col main">
+            <div>
+                <i class="fa fa-picture-o fa-4x project-icon"></i>
+            </div>
+            <div class="project-title">
+                <a class="" href="#">
+                <h3>Project n°9</h3></a><br><p>Description</p>
+            </div>
+        </div>
+    </div>
+    <hr>
+
+    <!-- Secondary projects list -->
+    <div class="row">
+         <!-- Four projects by row -->
+         <div class="col secondary"><a class="" href="#"><h3>Archive</h3><p>Description</p></a></div>
+         <div class="col secondary"><a class="" href="#"><h3>Archive</h3><p>Description</p></a></div>
+         <div class="col secondary"><a class="" href="#"><h3>Archive</h3><p>Description</p></a></div>
+         <div class="col secondary"><a class="" href="#"><h3>Archive</h3><p>Description</p></a></div>
+    </div>
+
+     <div class="row">
+         <!-- Four projects by row -->
+         <div class="col secondary"><a class="" href="#"><h3>Archive</h3><p>Description</p></a></div>
+         <div class="col secondary"><a class="" href="#"><h3>Archive</h3><p>Description</p></a></div>
+         <div class="col secondary"><a class="" href="#"><h3>Archive</h3><p>Description</p></a></div>
+          <div class="col secondary"><a class="" href="#"><h3>Archive</h3><p>Description</p></a></div>
+    </div>
+    <hr>
+
+    <!-- footer -->
+    <footer class="footer">
+            <p class="left"><a href="#">Paul Gaston</a></p>
+            <p class="right">
+            <a href="#" class="">Blog</a>&nbsp;&nbsp;
+            <a href="#" class="">Twitter</a>&nbsp;&nbsp;
+            <a href="#" class="">Github</a>&nbsp;&nbsp;
+            <a href="#" class="">Contact</a></p>
+    </footer>
+  </main>
+</body>
+</html>
