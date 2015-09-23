@@ -5,11 +5,11 @@ http://gastongouron.github.io/index.html
 #### What did you learn about CSS padding, borders, and margin by doing this challenge?
 In CSS, you can define 3 different properties for your elements borders and those will affect the way elements contained inside the div will display comparend to thei parents and the behaviour of their children:
 
-**The padding property (inside the div):** define the space between the element border and the element content
+**1. The padding property (inside the div):** define the space between the element border and the element content
 
-**The margin property (outside the div):** define the space around elements.
+**2. The margin property (outside the div):** define the space around elements.
 
-**The border (of the div itself):** defines the style, size, and color of an element's border.
+**3. The border property(of the div itself):** defines the style, size, and color of an element's border.
 
 #### What did you learn about CSS positioning?
 I learnt that positionning can be made few different ways depending on what you need:
@@ -29,7 +29,7 @@ position: fixed;
 /** Descendant elements **/
 position: inherit;
 
-/** extra properties for positionning are **/
+/** Extra properties for positionning are **/
 position: top right bottom left
 
 /** Placing elements on the first plan or on the background, be careful with this one**/
@@ -42,10 +42,10 @@ overflow: [visible (the default), hidden, scroll, auto, inherit]
 CSS positioning can seem tough on the first look. But once you start working with it, you will find that you often use the same kinds of positionnings, more over, with a grid system (some table, flex and @media properties in order to adapt to screen size modification) you will be able to go kind of further in terms of design and responsiveness. Also, using overflow on certain sections (and some other CSS tricks) you will be abble to enhance the user experience on your website.
 
 #### What aspects of your design did you find easiest to implement? What was most difficult?
-The easiest: My Layout was quite simple by the way so everything was easy to implement.
+**The easiest:** My Layout was quite simple by the way so everything went good on implementation.
 
-The most difficult:
-Fine tuning animations durations to have a fluid experience when navigating through the site was not so easy. Not using bootstrap was also a funny part of the challenge!
+**The most difficult:**
+The details, fine tuning typography and elements's animations durations to have a fluid experience when hovering menu items, was not so easy. Not using bootstrap was also a funny part of the challenge because it forced me to build my own CSS rules `em` instead of `px` and grid system using `@media` and `table`!
 
 #### What did you learn about adding and formatting elements with CSS in this challenge?
 Formatting elements requires skill and practice. It's very important to understand the principles of specificity, cascade and inherence. I learnt how to use more relationships in my CSS in order to have specific CSS applied to certain elements. Also I learnt that naming conventions are really important when creating your own css because you will have to deal with those names a lot!
