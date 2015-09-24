@@ -30,13 +30,28 @@ position: fixed;
 position: inherit;
 
 /** Extra properties for positionning are **/
-position: top right bottom left
+position: top right bottom left;
 
 /** Placing elements on the first plan or on the background, be careful with this one**/
-z-index: [positive or negative value]
+z-index: [positive or negative value];
 
 /** The default behavior is to make the overflowing content visible, but it can be changed so that the content is clipped to the confines of the element’s box, optionally providing a mechanism for scrolling the content. **/
 overflow: [visible (the default), hidden, scroll, auto, inherit]
+```
+
+An other useful attribute is `display` when it comes to position elements next to each others:
+```
+/** Default value. Displays an element as an inline element  **/
+display: inline;
+
+/** Displays an element as a block element  **/
+display: block;
+
+/** Displays an element as an block-level flex container. New in CSS3 **/
+display: flex;
+
+/** Displays an element as an inline-level block container. The inside of this block is formatted as block-level box, and the element itself is formatted as an inline-level box **/
+display: inline-block
 ```
 
 CSS positioning can seem tough on the first look. But once you start working with it, you will find that you often use the same kinds of positionnings, more over, with a grid system (some table, flex and @media properties in order to adapt to screen size modification) you will be able to go kind of further in terms of design and responsiveness. Also, using overflow on certain sections (and some other CSS tricks) you will be abble to enhance the user experience on your website.
