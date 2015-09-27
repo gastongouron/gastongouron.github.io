@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Gastons'Herald</title>
+  <meta charset="UTF-8">
+  <!-- Call stylesheet-->
+  <link rel="stylesheet" type="text/css" href="../stylesheets/default.css">
+  <link rel="stylesheet" type="text/css" href="../stylesheets/blog.css">
+  <link rel="icon" href="./imgs/heraldIcon.png" />
+</head>
+
+<body class="neutral">
+  <main class="contents white">
+    <article>
+      <nav><a href="index.html">Gastons'Herald</a></nav>
+      <header>
+      <h1>CSS: classes vs. ids</h1>
+      <h2>What are best practices?</h2>
+      </header>
+      <img src="./imgs/post2.png" alt="Please, check your image path!">
+      <section class="info-inner">
+        <h3>Why using ID's and Classes in CSS?</h3>
+        <p>Even if basic HTML elements like <code>&lt;p&gt;</code> and <code>&lt;div&gt;</code> offers native display properties, our basic set of tags doesn't cover every possible layout needs you will encounter. This is the reason why you will often want to use CSS id’s and classes styling attributes. CSS obviously needs these so that we may build selectors and do our styling, but other web languages like Javascript depend on them too. So, what is the difference between them?</p>
+
+        <h3>How are they different?</h3>
+        <p><code>id</code> are unique, each element can have only one <code>id</code> and each page can have only one element with that <code>id</code>. <code>class</code>es are not unique</b>, you can use the same <code>class</code> on multiple elements and multiple <code>class</code> on the same element:</p>
+
+   <div class="info-inner">
+                <pre><code>&lt;div class="project"&gt;&lt;/div&gt;
+&lt;div class="project"&gt;&lt;/div&gt;</code></pre>
+<p>You can now use the class name "project" as your hook to apply the same set of styling to each one of these divs. If you need one of them to be bigger than the other, but still share all the other attributes you can simply apply more than one class:</p>
+                <pre><code>&lt;div class="project"&gt;&lt;/div&gt;
+&lt;div class="project big"&gt;&lt;/div&gt;</code></pre>
+            </div>
+        </div>
+<p>No need to make a brand new class name here, just apply a new class right in the class attribute. These classes are space delimited and most browsers support any number of them <i>(actually, it's more like thousands, but way more than you'll ever need)</i>. There are no browser defaults for any ID or Class.<br><br>
+In fact, ID's have special browser functionality. Classes have no special abilities in the browser, but ID's do have one very important trick up their sleeve. This is the "hash value" in the URL. If you have a URL like http://yoursite.com#post, the browser will attempt to locate the element with an <code>id="post"</code> and will automatically scroll the page to show that element. This is an important reason right here why having <code>id</code> be absolutely unique is important. So your browser knows what to do when the hash is requested!
+</p>
+
+        <h3>When to use both on same elements?</h3>
+        <p>
+Nothing stops you from having both an <code>id</code> and a <code>class</code> on a single element. In fact, it is often a very good idea. Generally, you will want to use classes for pure styling purposes and id's for scripts purposes, just like:
+<div class="info-inner">
+                <pre><code>&lt;div class="project" id="myUniqueBlueProject"&gt;&lt;/div&gt;</code></pre>
+            </div>
+        </div>
+<p>Finally, CSS doesn't really care, regarding CSS, there is nothing you can do with an <code>id</code> that you can't do with a <code>class</code>. But Javascript cares,
+for those familiar with jQuery, you know how easy it is to add and remove classes to page elements. It is a native and built-in function of jQuery. Notice that no such function exists for ID's because manipulating ids instead of classes would cause more problems than it would be worth.
+<br><br>
+As you can see, classes and ID's are very important and we rely on them every day to do the styling and page manipulation that we need to do. However, you should use them judiciously and semantically so if you don’t need them, don’t use them!
+        </p>
+        <br><h4 class="neutral">Posted Wednesday, Septembre 23, 2015</h4><br><br>
+      </section>
+    </article>
+    <footer></footer>
+  </main>
+</body>
+</html>
+

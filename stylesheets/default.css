@@ -1,10 +1,10 @@
 /** FONTS **/
-
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,400italic,500,500italic,700,900italic,700italic,900);
 
 @font-face {
     font-family: 'VistaSansOT-Black';
-    src: url('VistaSansOT-Black.eot?#iefix') format('embedded-opentype'),  url('VistaSansOT-Black.otf')  format('opentype'),
-    url('VistaSansOT-Black.woff') format('woff'), url('VistaSansOT-Black.ttf')  format('truetype'), url('VistaSansOT-Black.svg#VistaSansOT-Black') format('svg');
+    src: url('../fonts/VistaSansOT-Black.eot?#iefix') format('embedded-opentype'),  url('../fonts/VistaSansOT-Black.otf')  format('opentype'),
+    url('../fonts/VistaSansOT-Black.woff') format('woff'), url('../fonts/VistaSansOT-Black.ttf')  format('truetype'), url('../fonts/VistaSansOT-Black.svg#VistaSansOT-Black') format('svg');
     font-weight: normal;
     font-style: normal;
 }
