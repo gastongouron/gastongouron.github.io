@@ -47,7 +47,17 @@
    'wagon_2' => 1337,
    'wagon_3' => (2+1)
  }</pre>
-            <p>Again, like arrays, hashes can be created, ordered and used in many different ways, they will become very handy every time you will have to work with informations that come in a <code>key => value</code> model. For more infos about hashes built-in methods, see <a href="http://ruby-doc.org/core-2.1.0/Hash.html">Official Hashes Ruby docs</a>.</p>
+            <p>Again, like arrays, hashes can be created, ordered and used in many different ways, they will become very handy every time you will have to work with informations that come in a <code>key => value</code> model.
+            <pre class="prettyprint lang-ruby">
+ trainstation_hash = {
+      engine_hash  => {'wagon_1' => 'cat',
+                       'wagon_2' => 1337,
+                       'wagon_3' => (2+1)
+                      },
+      another_hash => {},
+      and_so_on    => {}
+ }</pre>
+              Keep in mind a value of a key => value model can be a hash too so now you can imagine how big models of data you can possibly create with hashes. For more infos about hashes built-in methods, see <a href="http://ruby-doc.org/core-2.1.0/Hash.html">Official Hashes Ruby docs</a>.</p>
           </section>
 
           <br><h4 class="neutral">&nbsp;Posted Thursday, October 1 &mdash; 2015&nbsp;</h4><br><br>
