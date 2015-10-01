@@ -28,27 +28,25 @@
           <h3>An array is like a freight train!</h3>
           <p>An array is an ordered collection of objects. That may sound weird, but my understanding or array can be compared to trains. The name of the array is the engine, and the objects contained inside it the wagons.</p>
           <pre class="prettyprint lang-ruby">
-            engine = ['wagon_1', 'wagon_2', 'wagon_3']
-            engine[2]  #=> wagon_3</pre>
+ engine = ['wagon_1', 'wagon_2', 'wagon_3']
+ engine[2]  #=> wagon_3</pre>
             <p>In this collection structure you will be able to access every object of the collection using its index. The index is an integer that represents the location of the object in the array <i>(remember we start counting at 0, so the first item of your array will be <code>array=[0]</code> ).</i></p>
             <pre class="prettyprint lang-ruby">
-              engine = ['cat', 1337, (2+1)]
-            </pre>
+ engine = ['cat', 1337, (2+1)]</pre>
             <p>An array can contain a multiple kind of objects such as integers, strings, math operation, classes and even arrays!</p>
             <pre class="prettyprint lang-ruby">
-              engine = ['cat', 1337, (2+1)]
-              engine.push([])  #=> ['cat', 1337, 3, []]
-            </pre>
+ engine = ['cat', 1337, (2+1)]
+ engine.push([])  #=> ['cat', 1337, 3, []]</pre>
             <p>The interest of using an array is that you can access a large library of built-in methods in order to process the data of the array the way you want, adding <i>(or concat)</i>, extracting <i>(shift and pop)</i>, sorting, querying and transforming them in many different ways. For more infos about arrays built-in methods, see <a href="http://docs.ruby-lang.org/en/2.0.0/Array.html">Official Arrays Ruby docs</a>.</p>
 
             <h3>An hash is like an array...</h3>
             <p>Like arrays, hashes are collections of objects but with some extra purposes. In fact, they works with a key/value pair principle that allows you to perform more complex filtering and sorting operations than with arrays. In hashes, the left value is connected to the right value with the <code>=></code> operator. Let's see what our engine array would look like if it was an hash:</p>
             <pre class="prettyprint lang-ruby">
-              engine_hash = {
-              'wagon_1' => 'cat',
-              'wagon_2' => 1337,
-              'wagon_3' => (2+1)
-            }</pre>
+ engine_hash = {
+   'wagon_1' => 'cat',
+   'wagon_2' => 1337,
+   'wagon_3' => (2+1)
+ }</pre>
             <p>Again, like arrays, hashes can be created, ordered and used in many different ways, they will become very handy every time you will have to work with informations that come in a <code>key => value</code> model. For more infos about hashes built-in methods, see <a href="http://ruby-doc.org/core-2.1.0/Hash.html">Official Hashes Ruby docs</a>.</p>
           </section>
 

@@ -22,10 +22,10 @@ b {
   font-weight: 500;
 }
 pre {
-  background: #212121;
+  background: #F0F0F0;
   padding:1em;
   border-radius: 8px;
-  color:#FFF;
+  color:#grey;
 }
 /* Responsive image with border radius */
 img {
