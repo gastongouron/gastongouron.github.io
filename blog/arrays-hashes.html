@@ -29,15 +29,15 @@
           <p>An array is an ordered collection of objects. That may sound weird, but my understanding or array can be compared to trains. The name of the array is the engine, and the objects contained inside it the wagons.</p>
           <pre class="prettyprint lang-ruby">
  engine = [wagon_1, wagon_2, wagon_3]</pre>
-            <p>In this collection structure you will be able to access every object of the collection using its index. The index is an integer that represents the location of the object in the array <i>(remember we start counting at 0, so the first item of your array will be <code>array=[0]</code> ).</i></p>
+            <p>In this collection structure you will be able to access every object of the collection using its index. The index is an integer that represents the location of the object in the array <i>(remember we start counting at 0, so the first item of your array will be <code>array=[0]</code> ).</i> An array can contain a multiple kind of objects such as integers, floats, strings, math operation, classes and even arrays!</p>
+</p>
             <pre class="prettyprint lang-ruby">
  wagon_1 = 'cat'
- wagon_2 = 1337
- wagon_3 = (7*3)</pre>
-            <p>An array can contain a multiple kind of objects such as integers, strings, math operation, classes and even arrays!</p>
-            <pre class="prettyprint lang-ruby">
+ wagon_2 = 13.37
+ wagon_3 = (7*3).to_i
+
  engine = [wagon_1, wagon_2, wagon_3]
- engine.push([])  #=> [wagon_1, wagon_2, wagon_3, []]</pre>
+ engine.push([])  #=> ['cat', 13.37, 21, []]</pre>
             <p>The interest of using an array is that you can access a large library of built-in methods in order to process the data of the array the way you want, adding <i>(or concat)</i>, extracting <i>(shift and pop)</i>, sorting, querying and transforming them in many different ways.</p>
           <pre class="prettyprint lang-ruby">
  engine[2]  #=> (21)</pre>
@@ -49,7 +49,7 @@
             <pre class="prettyprint lang-ruby">
  engine_hash = {
    wagon_1 => 'cat',
-   wagon_2 => 1337,
+   wagon_2 => 13.37,
    wagon_3 => (7*3)
  }</pre>
             <p>Again, like arrays, hashes can be created, ordered and used in many different ways, they will become very handy every time you will have to work with informations that come in a <code>key => value</code> model because you can retrive the value simply by using the key, without iterating!</p>
