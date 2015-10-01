@@ -121,6 +121,7 @@ a:hover {
   text-decoration: none;
   border-radius: 4px;
   background-color:#FCE200;
+  transition: 0.5s;
   /*
   padding-bottom: 1px;
   padding-top: 3px;
