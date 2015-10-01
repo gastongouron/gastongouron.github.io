@@ -22,8 +22,9 @@ b {
   font-weight: 500;
 }
 pre {
-  background: #F0F0F0;
+  background-color: white;
   padding:1em;
+  border:1px solid black;
   border-radius: 8px;
   color:#grey;
 }
