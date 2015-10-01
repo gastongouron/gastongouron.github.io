@@ -48,13 +48,13 @@
             <p>Like arrays, hashes are collections of objects but with some extra purposes. In fact, they works with a key/value pair principle that allows you to perform more complex filtering and sorting operations than with arrays. In hashes, the left value is connected to the right value with the <code>=></code> operator. Let's see what our engine array would look like if it was an hash:</p>
             <pre class="prettyprint lang-ruby">
  engine_hash = {
-   wagon_1 => 'cat',
-   wagon_2 => 13.37,
-   wagon_3 => (7*3)
+   'wagon_1' => 'cat',
+   'wagon_2' => 13.37,
+   'wagon_3' => (7*3)
  }</pre>
             <p>Again, like arrays, hashes can be created, ordered and used in many different ways, they will become very handy every time you will have to work with informations that come in a <code>key => value</code> model because you can retrive the value simply by using the key, without iterating!</p>
                         <pre class="prettyprint lang-ruby">
- engine_hash[wagon_1] #=> 'cat'</pre>
+ engine_hash['wagon_1'] #=> 'cat'</pre>
           <p>For more infos about hashes built-in methods, see <a href="http://docs.ruby-lang.org/en/2.0.0/Hash.html">Official Hashes Ruby docs</a>.</p>
           </section>
 
