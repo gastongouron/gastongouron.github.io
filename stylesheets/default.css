@@ -151,13 +151,13 @@ hr {
   transition: 0.3s;
   color: white; }
 
-/** Yellow selection yay! **/
+/** Transparent selection yay! **/
 ::-moz-selection {
-  background: #191919;
+  background: transparent;
   text-shadow: none; }
 
 ::selection {
-  background: #191919;
+  background: transparent;
   text-shadow: none; }
 
 /** Make my profil image dissapear when screen < 479 **/
