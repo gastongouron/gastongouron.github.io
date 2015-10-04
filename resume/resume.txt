@@ -2,7 +2,7 @@
 
 Paul		06.03.1988
 Gaston		+33(0)660-446-596
-Gouron		gastongouron@gmail.com 
+Gouron		gastongouron@gmail.com
 		www.gastongouron.com
 
 
@@ -24,10 +24,13 @@ Gouron		gastongouron@gmail.com
 		Web agency, HTML/CSS/jQuery
 		www.doodle.be
 
-2012		Started as a Freelance Ui designer
-		
+2012		Started as a Freelance Ui/Ux designer, Bru
+
 
 *** STUDIES ******************************************
+
+XXXX — XXXX DevBootcamp, San Francisco
+		Full-Stack developer training
 
 XXXX — XXXX	E.N.S.A.V La Cambre, Bruxelles
 		Master in Information design
@@ -40,13 +43,13 @@ XXXX — XXXX	Lycée Nd La Merci, Montpellier
 
 
 *** SKILLS *******************************************
-	
-Web		HTML/CSS/jQuery, Devtools, Git, Github
-		Google and facebook APIs, Xcode, 
-		Sublime, Wordpress, Newsletters, SEO,
-		Mailing, Streaming.		
 
-Editing		Indesign, Premiere, Maya, Audacity, 
+Web		HTML/CSS/jQuery, SASS, Devtools, Git, Github
+		Google and facebook APIs, Xcode, Ruby,
+		Sublime, Wordpress, Newsletters, SEO,
+		Mailing, Streaming.
+
+Editing		Indesign, Premiere, Maya, Audacity,
 		Abbleton, Photoshop.
 
 Type design	Fontlab, Glyphs
@@ -65,8 +68,8 @@ Languages	English, spanish, french.
 
 Mobility	Type B Driving license, love biking
 
-Interests	Read, play blitz-scrabble, watch 
-		old movies, play guitar and chess, 
+Interests	Read, play blitz-scrabble, watch
+		old movies, play guitar and chess,
 		sail and surf (on the internet)
 
 
