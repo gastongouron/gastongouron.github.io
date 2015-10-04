@@ -1,6 +1,5 @@
 /** SOME SASS VARIABLES **/
 $dark: #191919;
-$random-color: $dark;
 
 /** FONTS **/
 @import url(https://fonts.googleapis.com/css?family=Roboto:400,400italic,500,500italic,700,900italic,700italic,900);
@@ -189,14 +188,14 @@ hr {
     color:white;
 }
 
-/** Yellow selection yay! **/
+/** Transparent selection yay! **/
 ::-moz-selection {
-    background: $random-color;
+    background: transparent;
     text-shadow: none;
 }
 
 ::selection {
-    background: $random-color;
+    background: transparent;
     text-shadow: none;
 }
 
