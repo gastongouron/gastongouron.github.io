@@ -1,0 +1,208 @@
+html{
+height: 100%;
+}
+/* Page body */
+body {
+  padding: 0px;
+  margin:auto;
+  position:relative;
+  top:0px;
+  font-size: 1.166rem;
+  font-family: Roboto;
+  height:100%;
+}
+
+/* Navigation menu */
+nav {
+    margin-top:20px;
+    font-size: 1em;
+    font-weight: 400;
+}
+b {
+  font-weight: 500;
+}
+pre {
+  background-color: white;
+  padding:1em;
+  border:1px solid black;
+  border-radius: 5px;
+  color:#grey;
+}
+/* Responsive image with border radius */
+img {
+    display: block;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px;
+    border-radius: 15px;
+}
+
+/* Main for max width */
+@media (max-width: 3000px) {
+main {
+  position:inherit;
+  max-width: 640px;
+  margin:0 auto;
+  color: #212121;
+  padding-left:2em;
+  padding-right:2em;
+  line-height: 1.666em;
+}
+}
+@media (max-width: 640px) {
+main {
+  position:inherit;
+  max-width: 640px;
+  margin:0 auto;
+  color: #212121;
+  padding-left:1em;
+  padding-right:1em;
+  line-height: 1.666em;
+}
+}
+
+/** Post title **/
+h1 {
+  margin-bottom: 0em;
+  font-size:50px;
+  font-weight: 900;
+  line-height: 1em;
+  -webkit-margin-before: 0.2em;
+  -webkit-margin-after: 0.2em;
+}
+
+/** Post sub-title **/
+h2 {
+  margin-top:5px;
+  font-size:33px;
+  font-weight: 700;
+  line-height: 1em;
+}
+
+/** Questions **/
+h3 {
+  margin-top:28px;
+  margin-bottom:8px;
+  font-weight: 500;
+}
+
+/** Week & date style **/
+h4 {
+  font-family: monospace;
+  font-weight:normal;
+  display: inline;
+  padding:5px;
+  border-radius: 5px;
+}
+
+/** Paragraph **/
+p {
+    font-size: 0.9em;
+    line-height: 1.6em;
+    font-weight: 400;
+    -webkit-margin-before: 0em;
+    -webkit-margin-after: 0em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    -ms-word-break: keep-all;
+     word-break: keep-all;
+}
+
+/** Links **/
+a {
+  color:#212121;
+  font-weight: 500;
+  -webkit-transition: .1s;
+  text-decoration: none;
+}
+
+/** Custom link style and animation on hover **/
+a:hover {
+  color: #000;
+  text-decoration: none;
+  border-radius: 4px;
+ /* background-color:#FCE200; */
+  transition: 0.5s;
+  /*
+  padding-bottom: 1px;
+  padding-top: 3px;
+  padding-right: 3px;
+  padding-left: 3px;
+  background-color:#000;
+  **/
+}
+
+/** Separation line **/
+hr {
+
+    margin: 1em 1em;
+    border: solid #ddd;
+    border-width: 2px 0 0;
+}
+
+/** Used on all articles **/
+article {
+  padding-right:20px;
+  padding-left:20px;
+}
+
+/** Used on index menu for hover padding **/
+.articleItem {
+  padding:22px;
+}
+
+/** Over effect **/
+.articleItem:hover {
+  color:#212121;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+
+/** Custom link style and animation on hover **/
+.wrapper {
+  color: #424242;
+}
+
+/** Custom link style and animation on hover for date**/
+.articleItem:hover .wrapper,
+.articleItem:hover ~ .wrapper {
+  background: #FFF;
+  transition: 0.3s;
+}
+
+/** Neutral background **/
+.neutral {
+  background: url("../imgs/neutral.png") repeat;
+}
+
+/** White background **/
+.white {
+  background-color:white;
+}
+
+/** Classes below have to be integrated more smartly **/
+.indexInfo{
+padding-left:20px
+}
+
+.contents {
+  padding-top:60px;
+}
+
+/** Yellow selection yay! **/
+::-moz-selection {
+    background: transparent;
+    text-shadow: none;
+}
+
+::selection {
+    background: transparent;
+    text-shadow: none;
+}
+
+.info-inner > p > code {
+    padding: 0.25em;
+    border-radius: 4px;
+    border: 1px solid #bbb;
+}
