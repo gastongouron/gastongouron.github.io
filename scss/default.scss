@@ -29,6 +29,7 @@ body {
 a {
     text-decoration: none;
     color:$dark;
+    transition: 0.3s ease-in;
 }
 
 a:hover {
@@ -149,7 +150,7 @@ hr {
 .footer {
     padding-right: 1em;
     padding-left: 1em;
-    padding-bottom:2em;
+    padding-bottom:2.1em;
 }
 
 /** Helpful classes **/
@@ -160,6 +161,7 @@ hr {
 
 .left {
     float:left;
+
 }
 
 .right {
