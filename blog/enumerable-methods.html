@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Gastons'Herald</title>
+  <meta charset="UTF-8">
+  <!-- Call stylesheet-->
+  <link rel="stylesheet" type="text/css" href="../stylesheets/default.css">
+  <link rel="stylesheet" type="text/css" href="../stylesheets/blog.css">
+  <script type="text/javascript" src="../scripts/jquery-1.11.3.min.js"></script>
+  <!-- Favicon -->
+  <link rel="icon" href="./imgs/heraldIcon.png" />
+</head>
+
+<body class="">
+  <main class="heraldArticleMain white contents">
+    <article>
+      <nav><a class="navItem" href="index.html">Gastons'Herald</a></nav>
+      <header>
+        <h1>Ruby: Iterate through an enumerable with .cycle</h1>
+        <h2>Enumerable#cycle</h2>
+      </header>
+      <section class="info-inner">
+                  <img src="imgs/post5.png" alt="Check image path please.">
+        <h3>Cycle, a method of Enumerable in Ruby</h3>
+        <p>
+          In ruby, Enumerable provides many useful methods to help us when working on a collection. <b>Cycle</b> is one of them. In the simplest possible terms, for given a collection, cycle creates an infinitely-repeating ordered source of its collection items. This method expects an optional code block to act on the items in the infinitely repeating until a break statement is encountered. If no block is given, cycle returns an Enumerator that acts as the infinite source of the collection items..
+          <br>
+
+          <h3>Cycle and arrays</h3>
+          <p>If you use <code>cycle</code> on an array, and provide a code block, cycle will pass every single item into this block. When the last item has been passed, cycle will simply start again at the beginning of the array and this, until the end of time (or until cycle encounters a break statement).<br><br>To illustrate the power of cycle, let’s create a <code>days_of_the_week</code> array that holds every day of the week as a string and see what happens when we invoke cycle on it:</p>
+          <pre class="prettyprint lang-ruby">
+ days_of_the_week = ["Monday", "Tuesday", "Wednesday",
+ "Thursday", "Friday", "Saturday", "Sunday"]
+
+ days_of_the_week.cycle {|day| puts day}
+ => Monday
+ Tuesday
+ Wednesday
+ Thursday
+ Friday
+ Saturday
+ Sunday
+ Monday
+ Tuesday
+ …
+ # This will print the days of the week forever.
+ # Or until you stop it with CTRL+C.
+</pre>
+
+            <p>In fact, you will hardly ever need an infinite repetition of your days of the week, so you may need a “break” statement in order to break the cycle. Let's see how it works:
+</p>
+</p>
+            <pre class="prettyprint lang-ruby">
+ days_of_week.cycle do |day|
+    puts day
+    break if day == “Wednesday”
+ end
+
+ => Monday
+ Tuesday
+ Wednesday
+ => nil </pre>
+    <p>The <code>break</code> statement is stopping <code>.cycle</code> when the condition <code>== "Wednesday"</code> is met. Also, we can notice <code>.cycle</code> returns <code>nil</code> if the loop has finished without getting interrupted.</p>
+    <h3>Cycle and hashes</h3>
+            <p>When used on a hash and a block is provided, <code>.cycle</code> will collect, map and pass each key/value pair in the hash to the block. So, each key/value pair is passed to the block, where the operation in the block is performed on the item. Once the last hash item has been passed to the block, <code>.cycle</code> starts over again at the beginning of the hash. <code>.cycle</code> goes through the hash forever (unless it encounters a break statement in the block). <br><br>To illustrate the power of <code>.cycle</code> on an hash, let’s make a normal_day_hash that represents what I do everyday for few days:</p>
+          <pre class="prettyprint lang-ruby">
+ normal_day_hash = {
+ :morning => "wake up early and read the WGR",
+ :noon => "take a lunch break",
+ :afternoon => "work on DBC challenges.",
+ :evening => "try to cook a good diner",
+ :night => "write some ruby before I go to bed" }
+</pre>
+            <p>By passing the argument 2 to the method cycle, the method is going to cycle 2 times through the hash. For every cycle, every key/value pair of the hash will be treated by the block and return my daily routine of the next two days as a string. So, here are my plans for the next two days:</p>
+            <pre class="prettyprint lang-ruby"> normal_day_hash.cycle(2) {|time, activity|
+ puts "On the #{time}: I #{activity}"}
+
+ => On the morning: I wake up early and read the WGR
+ On the noon: I take a lunch
+ On the afternoon: I work on DBC challenges.
+ On the evening: I try to cook a good diner
+ On the night: I write some ruby before I go to bed
+ On the morning: I wake up early and read the WGR
+ On the noon: I take a lunch break
+ On the afternoon: I work on DBC challenges.
+ On the evening: I try to cook a good diner
+ On the night: I write some ruby before I go to bed
+ => nil
+</pre>
+            <p>For more informations about enumerable <code>.cycle</code> see <a href="http://ruby-doc.org/core-2.2.3/Enumerable.html#method-i-cycle">Official enumerable Ruby docs.</a></p>
+
+          </section>
+
+          <br><h4 class="">Posted Friday, October 9 &mdash; 2015</h4><br><br>
+        </article>
+        <footer></footer>
+      </main>
+     <script src="./../scripts/random-color-blog.js"></script>
+    </body>
+    <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+    </html>
