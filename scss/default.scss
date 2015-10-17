@@ -84,18 +84,21 @@ hr {
 
 /** Custom js lust styles **/
     ul#tabs {
+
         margin: 0px 0 0 0;
         padding: 0 0 0.3em 0;
     }
 
     ul#tabs li {
         display: inline;
+        font-size: 0.88em;
     }
 
     div.tabContent.hide {
     display: none;
     }
 
+/** Font awesome custom icon size **/
 
 /** Main project list items **/
 .main {
@@ -145,12 +148,21 @@ hr {
 @media (min-width: 50em) {
     .row { width: 100%; display: table; table-layout: fixed; }
     .col { display: table-cell; }
+    .colresume { display: table-cell; }
 }
 
 @media (max-width: 479px) {
+    .colresume {
+        width: 100% !important;
+    }
+
     .col {
         width: 100% !important;
     }
+}
+
+.date {
+    width:96px
 }
 
 .main {
@@ -167,7 +179,7 @@ hr {
 .footer {
     padding-right: 1em;
     padding-left: 1em;
-    padding-bottom:3.6em;
+    padding-bottom:2.88em;
 }
 
 /** Helpful classes **/
@@ -178,7 +190,7 @@ hr {
 
 .left {
     float:left;
-
+    padding-top: 5px;
 }
 
 .right {
