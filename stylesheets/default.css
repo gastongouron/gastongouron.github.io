@@ -63,6 +63,17 @@ hr {
   border: solid #ddd;
   border-width: 2px 0 0; }
 
+/** Custom js lust styles **/
+ul#tabs {
+  margin: 0px 0 0 0;
+  padding: 0 0 0.3em 0; }
+
+ul#tabs li {
+  display: inline; }
+
+div.tabContent.hide {
+  display: none; }
+
 /** Main project list items **/
 .main {
   line-height: 0.7em; }
@@ -123,7 +134,7 @@ hr {
 .footer {
   padding-right: 1em;
   padding-left: 1em;
-  padding-bottom: 2.1em; }
+  padding-bottom: 3.6em; }
 
 /** Helpful classes **/
 .debug {
