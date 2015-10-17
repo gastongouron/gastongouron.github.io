@@ -1,5 +1,5 @@
 $(document).ready(function () {
-    var colors = ["#885159", "#645188", "#886451", "#528881"];
+    var colors = ["#3875C5", "#179B72","#A10E32"];
     $('main').each(function () {
         var rand = Math.floor(Math.random() * colors.length);
         $( "a.navItem" )

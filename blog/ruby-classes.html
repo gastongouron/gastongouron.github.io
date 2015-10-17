@@ -134,7 +134,7 @@
    @@starting_color = "Green"
    attr_accessor :name, :days, :color
 
-     def initialize(name, days, color=@starting_color)
+     def initialize(name, days, color=@@starting_color)
        @name = name
        @days = days
        @color = color # Default green thanks to @@starting_color!

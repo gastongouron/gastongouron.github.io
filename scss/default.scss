@@ -43,6 +43,7 @@ h1 {
     font-size: 10vw;
     line-height: 1em;
     font-family: 'VistaSansOT-Black' !important;
+
 }
 
 /** Description **/
@@ -50,6 +51,7 @@ h2 {
     font-size: 1.5rem;
     font-weight: 500;
     line-height: 1.5em;
+
 }
 
 /** Project Title **/
@@ -79,6 +81,21 @@ hr {
     border: solid #ddd;
     border-width: 2px 0 0;
 }
+
+/** Custom js lust styles **/
+    ul#tabs {
+        margin: 0px 0 0 0;
+        padding: 0 0 0.3em 0;
+    }
+
+    ul#tabs li {
+        display: inline;
+    }
+
+    div.tabContent.hide {
+    display: none;
+    }
+
 
 /** Main project list items **/
 .main {
@@ -150,7 +167,7 @@ hr {
 .footer {
     padding-right: 1em;
     padding-left: 1em;
-    padding-bottom:2.1em;
+    padding-bottom:3.6em;
 }
 
 /** Helpful classes **/
