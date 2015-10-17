@@ -29,7 +29,7 @@ Gouron		gastongouron@gmail.com
 
 *** STUDIES ******************************************
 
-XXXX — XXXX DevBootcamp, San Francisco
+XXXX — XXXX 	DevBootcamp, San Francisco
 		Full-Stack developer training
 
 XXXX — XXXX	E.N.S.A.V La Cambre, Bruxelles

@@ -69,11 +69,13 @@ ul#tabs {
   padding: 0 0 0.3em 0; }
 
 ul#tabs li {
-  display: inline; }
+  display: inline;
+  font-size: 0.88em; }
 
 div.tabContent.hide {
   display: none; }
 
+/** Font awesome custom icon size **/
 /** Main project list items **/
 .main {
   line-height: 0.7em; }
@@ -118,10 +120,19 @@ div.tabContent.hide {
     table-layout: fixed; }
 
   .col {
+    display: table-cell; }
+
+  .colresume {
     display: table-cell; } }
 @media (max-width: 479px) {
+  .colresume {
+    width: 100% !important; }
+
   .col {
     width: 100% !important; } }
+.date {
+  width: 96px; }
+
 .main {
   padding-top: 3em;
   padding-bottom: 3em; }
@@ -134,14 +145,15 @@ div.tabContent.hide {
 .footer {
   padding-right: 1em;
   padding-left: 1em;
-  padding-bottom: 3.6em; }
+  padding-bottom: 2.88em; }
 
 /** Helpful classes **/
 .debug {
   border: 2px solid red; }
 
 .left {
-  float: left; }
+  float: left;
+  padding-top: 5px; }
 
 .right {
   float: right; }
