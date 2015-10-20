@@ -11,19 +11,25 @@ $(document).ready(function () {
         });
             $( "div.col" )
         .mouseover(function() {
-            $(this).css("background-color", colors[rand]);
+            $(this).css("background", colors[rand]);
+            //"linear-gradient(45deg, #f06, yellow)"//
         })
         .mouseout(function() {
-            $(this).css("background-color", "white");
+            $(this).css("background", "white");
         });
         $( "article.articleItem" )
         .mouseover(function() {
-            $(this).css("background-color", colors[rand]);
+            $(this).css("background", colors[rand]);
             $(this).css("color", "white");
         })
         .mouseout(function() {
-            $(this).css("background-color", "white");
+            $(this).css("background", "white");
             $(this).css("color", "#212121");
         });
     });
 });
+
+
+//background: #f06;
+//background: linear-gradient(45deg, #f06, yellow);
+//min-height: 100%;
