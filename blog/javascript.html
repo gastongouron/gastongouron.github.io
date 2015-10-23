@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Gastons'Herald</title>
+  <meta charset="UTF-8">
+  <!-- Call stylesheet-->
+  <link rel="stylesheet" type="text/css" href="../stylesheets/default.css">
+  <link rel="stylesheet" type="text/css" href="../stylesheets/blog.css">
+  <script type="text/javascript" src="../scripts/jquery-1.11.3.min.js"></script>
+  <!-- Favicon -->
+  <link rel="icon" href="./imgs/heraldIcon.png" />
+</head>
+
+<body class="">
+  <main class="heraldArticleMain white contents">
+    <article>
+      <nav><a class="navItem" href="index.html">Gastons'Herald</a></nav>
+      <header>
+        <h1>JS/Ruby: A tale of loops...</h1>
+        <h2>Is looping in ruby the same as in JS?</h2>
+      </header>
+      <section class="info-inner">
+                  <img src="imgs/post7.png" alt="Check image path please.">
+        <h3>What is a loop?</h3>
+        <p>
+          In Ruby and JavaScript, as in computer programming in general, a loop is a sequence of instruction s that is continually repeated until a certain condition is reached. Typically, a certain process is done, such as getting an item of data and changing it, and then some condition is checked such as whether a counter has reached a prescribed number. Basically, a loop is a fundamental programming idea that is commonly used in writing programs and, Ruby and JS offers similar ways to perform those loop but with a slightly different syntax because of their internal logic.<br><br>In the next part of the article we will try to understand basic ruby loops and explain how they work internally, then, those loops will be "translated" into their jasvascript equivalent notation in order to compare both languages ways of looping.</p>
+
+          <h3>Some Ruby loops: while, until and for</h3>
+          <p>One of the main idea with the most common Ruby loops (while, until) is that they can be used for both a statement, and a modifier.
+            For example, if we consider the <code>while</code> ruby method (which executes code while conditional is true), we see it can be used for both purposes:</p>
+          <pre class="prettyprint lang-ruby">
+ # As a statement
+ while condition  [do]
+   #code
+ end
+
+ # As a modifier
+ code while condition
+ # Or (as a modifier too)
+ begin
+   code
+ end while conditional</pre>
+<p>The second example executes our code <code>while</code> conditional is true and we can have the same usage of the <code>until</code> (Executes code while conditional is false.) such as:</p>
+          <pre class="prettyprint lang-ruby">
+ # As a statement
+ until conditional [do]
+   code
+ end
+
+ # As a modifier
+code until conditional
+# Or
+begin
+   code
+end until conditional</pre>
+ <p>So basically the only difference between our two first kind of loops is that one processes code block when the condition evaluates to true and the other to false. I belive this is the reason why Ruby came up with a third kind of frequently used loop, the <code>for</code> (Executes code once for each element in expression.). Contrary to <code>while</code> and <code>until</code>, <code>for</code> can only be used as a statement. Nevertheless, it exists a keyword <code>break</code> you can use in order to stop the loop:</p>
+         <pre class="prettyprint lang-ruby">
+ # Simple for loop
+ for variable [, variable ...] in expression [do]
+   code
+ end
+
+ # Loop stopped with a break
+ for i in 0..5
+   if i > 2 then
+      break
+   end
+   puts "Value of local variable is #{i}"
+ end
+</pre>
+<p>Even if there are some other looping methods used in ruby such as <a href="http://ruby-doc.org/core-1.9.3/Enumerator.html#method-i-next">next</a>, <a href="http://ruby-doc.org/docs/keywords/1.9/Object.html#method-i-redo">redo</a> and <a href="http://ruby-doc.org/docs/keywords/1.9/#M000031">retry</a> I think those three might be the one you will see the more often. Now you have a little overview of some different kinds of Ruby loops and it's time to compare these to JS's ones.</p>
+
+          <h3>Loops in JavaScript: while, for and do/while</h3>
+          <p>Even if the most common way to create conditional executions (multiple at least) is <code>if</code> (just like in Ruby), <code>while</code>, <code>for</code> and <code>do...while</code> are common ways to create a conditionnal statement execution in JavaScript or to repeat some actions. We call those loops, because, unless a condition if filled, they will force your script to keep on repeating a certain operation. <code>For</code> and <code>while</code> are very good ways to increment a value until a certain point because In JavaScript they can be used to internally define a variable and increment/decrement it:</p>
+
+          <pre class="prettyprint javascript">
+ // for:
+ var count = 10;
+   for (var i = 0; i < count; i++) {
+     document.writeln("looping away!");
+   }
+
+ // While:
+ var count = 0;
+ while (count < 10) {
+   document.writeln("looping away!");
+   count++;
+   }</pre>
+
+            <p>As you can see both <code>while</code> and <code>for</code> are doing the same job. The only difference is that for the <code>for</code> loops I used an extra argument <code>i++</code> in order to increment the i value contrary to the while loop where the <code>count++</code> used as an argument is a part of the loop and not of the arguments of the function while.<br><br>Finally, the <code>do...while</code> loop can be used for the same purposes and is structurally working as both a statement and a modifier: when <code>do</code> is asking the program to perform a task (incrementing a count for example), the program executes then will find a modifier <code>while</code> in order to repeat the condition until a certain conditionnal.</p>
+          <pre class="prettyprint javascript">
+ var count = 0;
+ do {
+     count++;
+     document.writeln("looping away!");
+ } while (count < 10);</pre>
+
+<p>Even if Ruby and JavaScript doesn't not rely on the same type of objects and the same notions of classes the concept of looping remains the same between the two languages: incrementing a value/wait until a condition is reached in order to perform an action a certain amount of times (or until this condition is reached). This is the reason why both languages offer tailored structures of loops, and why you have to choose between them wisely referring to your needs!
+</p>
+            <h3>More about Ruby and JS loops</h3>
+            <p>For more informations about loops in Ruby, see <a href="http://ruby-doc.org/core-2.2.3/Kernel.html#method-i-loop">Official loop Ruby docs.</a></p>
+            <p>For more informations about loops in JS, see <a href="https://developer.mozilla.org/en-US/docs/Glossary/loop">MDN loop JS docs.</a></p>
+
+          </section>
+
+          <br><h4 class="">Posted Friday, October 23 &mdash; 2015</h4><br><br>
+        </article>
+        <footer></footer>
+      </main>
+     <script src="./../scripts/random-color-blog.js"></script>
+    </body>
+    <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+    </html>
