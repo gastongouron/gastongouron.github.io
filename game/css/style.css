@@ -1,0 +1,23 @@
+body {
+  margin: 0;
+  padding: 0;}
+
+canvas {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  margin: 0 auto;
+  padding: 0;
+  background: linear-gradient(270deg, #ff6666, #ff5217);
+  background-size: 100% 100%;
+  animation: AnimationName 39s ease infinite;
+  @keyframes AnimationName {
+    0%{background-position:0% 83%}
+    50%{background-position:100% 18%}
+    100%{background-position:0% 83%}
+  }
+
+  -webkit-box-shadow: inset 0px 0px 107px -29px rgba(0,0,0,0.61);
+  -moz-box-shadow: inset 0px 0px 107px -29px rgba(0,0,0,0.61);
+  box-shadow: inset 0px 0px 107px -29px rgba(0,0,0,0.61);
+
