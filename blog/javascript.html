@@ -48,11 +48,11 @@
  end
 
  # As a modifier
-code until conditional
-# Or
-begin
+ code until conditional
+ # Or
+ begin
    code
-end until conditional</pre>
+ end until conditional</pre>
  <p>So basically the only difference between our two first kind of loops is that one processes code block when the condition evaluates to true and the other to false. I belive this is the reason why Ruby came up with a third kind of frequently used loop, the <code>for</code> (Executes code once for each element in expression.). Contrary to <code>while</code> and <code>until</code>, <code>for</code> can only be used as a statement. Nevertheless, it exists a keyword <code>break</code> you can use in order to stop the loop:</p>
          <pre class="prettyprint lang-ruby">
  # Simple for loop
