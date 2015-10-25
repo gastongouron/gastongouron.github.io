@@ -1,23 +1,56 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,700,300);
+
 body {
   margin: 0;
-  padding: 0;}
-
-canvas {
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  margin: 0 auto;
   padding: 0;
-  background: linear-gradient(270deg, #ff6666, #ff5217);
-  background-size: 100% 100%;
-  animation: AnimationName 39s ease infinite;
-  @keyframes AnimationName {
-    0%{background-position:0% 83%}
-    50%{background-position:100% 18%}
-    100%{background-position:0% 83%}
+  font-family: 'roboto', sans-serif;
+  font-weight: 300;
+}
+
+h1 {
+  color : red;
+    padding-left:20px;
+    padding-top:6px;
+      position: absolute;  color: black; z-index: 1;
+ }
+
+  p {
+    padding-left:20px;
+    padding-top:60px;
+    font-size: 0.8em;
+    font-family: sans-serif;
+    line-height: 1.2em;
+    position: absolute;  color: black; z-index: 1;
   }
 
-  -webkit-box-shadow: inset 0px 0px 107px -29px rgba(0,0,0,0.61);
-  -moz-box-shadow: inset 0px 0px 107px -29px rgba(0,0,0,0.61);
-  box-shadow: inset 0px 0px 107px -29px rgba(0,0,0,0.61);
+.deathz {
+  font-weight: 700;
+  color:red;
+}
 
+.winz {
+  font-weight: 700;
+  color:green;
+}
+
+  canvas {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    margin: 0 auto;
+    padding: 0;
+ background-color: white;
+}
+ /**   background: linear-gradient(7deg, #0f0f0f, #383838);
+    background-size: 400% 400%;
+    animation: AnimationName 30s ease infinite;
+    @keyframes AnimationName {
+      0%{background-position:0% 50%}
+      50%{background-position:100% 50%}
+      100%{background-position:0% 50%}
+    }
+
+    -webkit-box-shadow: inset 0px 0px 157px -29px rgba(0,0,0,0.61);
+    -moz-box-shadow: inset 0px 0px 157px -29px rgba(0,0,0,0.61);
+    box-shadow: inset 0px 0px 157px -29px rgba(0,0,0,0.61);
+  }
