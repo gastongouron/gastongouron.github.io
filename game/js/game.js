@@ -30,6 +30,7 @@ var CarSeven = {};
 var numberOfDeaths = 0;
 var numberOfWins = 0;
 
+
 // Rendering
 var gameLoop
 var update
@@ -37,7 +38,21 @@ var resetCar
 var resetPlayer
 
 
-// Events
+//Sounds
+var carNoise = new Audio("sound/noise.mp3");
+var carCrush = new Audio("sound/crush.mp3");
+var clapClap = new Audio("sound/clapclap.mp3");
+var playerFall = new Audio("sound/fall.mp3");
+
+
+// colors
+var dark = '#191919';
+var blue = 'blue';
+var red = 'red';
+
+
+
+// Events Listners
 //////////////////////////////////////////////////////////////////////////
 
 
@@ -50,6 +65,14 @@ addEventListener ("keydown", function (e) {
 addEventListener ("keyup", function (e) {
   delete keysDown[e.keyCode];
 }, false);
+
+// Car sound repeat
+carNoise.addEventListener('ended', function() {
+  this.currentTime = 0;
+  this.play();
+}, false);
+
+carNoise.play();
 
 
 //////////////////////////////////////////////////////////////////////////
@@ -83,8 +106,8 @@ var update = function (modifier) {
 // Drop player at its initial position
 var resetPlayer = function () {
 
-  player.x = 100;
-  player.y = canvas.height /2 ;
+  player.x = 111;
+  player.y = 116;
 
 };
 
@@ -95,15 +118,15 @@ var resetPlayer = function () {
 // Drop a car somewhere in the top of the screen
 var resetCar = function () {
 
-   Cars.forEach(function(uniqueCar) {
-      uniqueCar.x = 300 + (Math.random() * (canvas.width-600));
-      uniqueCar.y = -1000 * Math.random();
-      uniqueCar.speed = 10 * Math.random(2.5,5);
-      uniqueCar.size = 32 + Math.random(10,600)*100;
-      uniqueCar.width = 32;
-      uniqueCar.alpha = Math.random(1,100)
-      uniqueCar.color = 'Black';
-   });
+  Cars.forEach(function(uniqueCar) {
+    uniqueCar.x = 300 + (Math.random() * (canvas.width-600));
+    uniqueCar.y = -1000 * Math.random();
+    uniqueCar.speed = 10 * Math.random(2.5,5);
+    uniqueCar.size = 32 + Math.random(10,600)*100;
+    uniqueCar.width = 32;
+    uniqueCar.alpha = Math.random(10,100)
+    uniqueCar.color = red;
+  });
 
 };
 
@@ -114,25 +137,27 @@ var resetCar = function () {
 // Do player touch car?
 function drawTouchCar(){
 
-  // Evaluate coordonates of both objects, reset of touch
-  Cars.forEach(function(uniqueCar) {
+// Evaluate coordonates of both objects, reset of touch
+Cars.forEach(function(uniqueCar) {
 
-     if (
-        player.x <= (uniqueCar.x + uniqueCar.width)
-        && uniqueCar.x <= (player.x + 10)
-        && player.y <= (uniqueCar.y + uniqueCar.size)
-        && uniqueCar.y <= (player.y + 10)
-     ){
-        ++numberOfDeaths; // +1 Die
-        resetPlayer();
+  if (
+    player.x <= (uniqueCar.x + uniqueCar.width)
+    && uniqueCar.x <= (player.x + 10)
+    && player.y <= (uniqueCar.y + uniqueCar.size)
+    && uniqueCar.y <= (player.y + 10)
+    ){
+++numberOfDeaths; // +1 Die
+resetPlayer();
+carCrush.play();
 
-     }
-  // if player pass arival line
-     if(player.x > (canvas.width - 170 )){
-        resetPlayer();
-        ++numberOfWins; // +1 Win
-     }
-  });
+}
+// if player pass arival line
+if(player.x > (canvas.width - 170 )){
+  clapClap.play();
+  resetPlayer();
+++numberOfWins; // +1 Win
+}
+});
 }
 
 
@@ -144,14 +169,7 @@ function drawTouchCar(){
 function drawBackground(){
 
   ctx.clearRect(0,0, canvas.width, canvas.height);
-    ctx.beginPath();
-
-  //   ctx.rect( 0, 0 ,186,canvas.height);
-  //   ctx.fillStyle = "grey";
-  //   ctx.fill();
-  //   ctx.beginPath();
-  //   ctx.rect( canvas.width-186, 0 ,186,canvas.height);
-  //   ctx.fill();
+  ctx.beginPath();
 
 }
 
@@ -164,22 +182,25 @@ function drawPlayer(){
 
   ctx.beginPath();
   ctx.arc(player.x,player.y,5,0,2*Math.PI);
-  ctx.fillStyle = 'red';
+  ctx.fillStyle = dark;
   ctx.fill();
 
   if (player.x < 0){
     ++numberOfDeaths;
     resetPlayer();
+    playerFall.play();
   }
 
   if (player.y < 0){
     ++numberOfDeaths;
     resetPlayer();
+    playerFall.play();
   }
 
   if (player.y >= canvas.height){
     resetPlayer();
     ++numberOfDeaths;
+    playerFall.play();
   }
 
 }
@@ -193,17 +214,17 @@ function drawCar(){
 
   Cars.forEach(function(uniqueCar) {
 
-     ctx.beginPath();
-     ctx.globalAlpha = uniqueCar.alpha;
-     ctx.rect(uniqueCar.x,uniqueCar.y,32,uniqueCar.size);
-     ctx.fillStyle = uniqueCar.color;
-     ctx.fill();
-     uniqueCar.y += uniqueCar.speed;
+    ctx.beginPath();
+    ctx.globalAlpha = uniqueCar.alpha;
+    ctx.rect(uniqueCar.x,uniqueCar.y,32,uniqueCar.size);
+    ctx.fillStyle = uniqueCar.color;
+    ctx.fill();
+    uniqueCar.y += uniqueCar.speed;
 
-     if (uniqueCar.y > canvas.height){
-        uniqueCar.y = -10
+    if (uniqueCar.y > canvas.height){
+      uniqueCar.y = -10
       uniqueCar.x = 300 + (Math.random() * (canvas.width-600));
-           };
+    };
 
   });
 
@@ -216,11 +237,11 @@ function drawCar(){
 // Death counter and syntax variations
 function drawDeaths(){
   if (numberOfDeaths < 2){
-  document.getElementById("deathz").innerHTML = numberOfDeaths + " death";
+    document.getElementById("deathz").innerHTML = numberOfDeaths + " death";
   }
 
   else {
-  document.getElementById("deathz").innerHTML = numberOfDeaths + " deaths";
+    document.getElementById("deathz").innerHTML = numberOfDeaths + " deaths";
   }
 
 }
@@ -232,12 +253,12 @@ function drawDeaths(){
 // Win counter and syntax variations
 function drawWins (){
 
-if (numberOfWins < 2){
-  document.getElementById("winz").innerHTML = numberOfWins + " win";
+  if (numberOfWins < 2){
+    document.getElementById("winz").innerHTML = numberOfWins + " win";
   }
 
-else {
-  document.getElementById("winz").innerHTML = numberOfWins + " wins";
+  else {
+    document.getElementById("winz").innerHTML = numberOfWins + " wins";
   }
 
 }
@@ -253,8 +274,8 @@ function drawStart(){
   ctx.beginPath();
   ctx.moveTo(200,30);
   ctx.lineTo(200,canvas.height-30);
-  ctx.lineWidth = 2;
-  ctx.strokeStyle="black";
+  ctx.lineWidth = 1;
+  ctx.strokeStyle= dark;
   ctx.stroke();
 
 }
@@ -266,8 +287,13 @@ function drawStart(){
 // Arrival line
 function drawArrival(){
 
+  ctx.globalAlpha = 1;
+  ctx.beginPath();
   ctx.moveTo(canvas.width-200,30);
   ctx.lineTo(canvas.width-200,canvas.height-30);
+  ctx.lineWidth = 2;
+  ctx.strokeStyle= blue;
+  ctx.stroke();
   ctx.stroke();
 
 }
@@ -280,15 +306,15 @@ function drawArrival(){
 // Draw all elements needed
 function drawEverything (){
 
-  drawTouchCar();
-  drawBackground();
-  drawStart();
-  drawArrival();
-  drawPlayer();
-  drawCar();
-  drawWins();
-  drawDeaths();
-  drawWins();
+drawTouchCar();
+drawBackground();
+//drawStart(); Looks more sexy without!
+drawArrival();
+drawPlayer();
+drawCar();
+drawWins();
+drawDeaths();
+drawWins();
 
 };
 
