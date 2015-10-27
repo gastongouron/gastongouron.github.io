@@ -1,0 +1,72 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,400italic,500,500italic,700,900italic,700italic,900);
+
+html {
+  font: 18px/1.4 "Roboto", sans-serif;
+  text-align:left;
+}
+
+body {
+  margin-top: 0px;
+  margin-right: 0px;
+  margin-left: 0px;
+  margin-bottom: 0px;
+  color:#191919;
+}
+
+h1 {
+  text-align:center;
+  margin-top:0px;
+  padding-top:1em;
+}
+
+a{
+  text-decoration: none;
+  font-weight: bold;
+  color:#FB4B1D;
+}
+
+img {
+  display:block;
+  margin:auto;
+  padding-bottom: 1em;
+}
+
+.column-1 {
+  padding-left: 2em;
+  padding-right: 2em;
+  display:table-cell;
+  width:50%;
+}
+
+.column-2 {
+  padding-left: 2em;
+  padding-right: 2em;
+  display:table-cell;
+  width:50%;
+  border-left:3px solid #921C00;
+}
+
+header > p {
+  padding-left:2em;
+  padding-right:2em;
+  padding-bottom:2em;
+}
+
+header, footer {
+/*  background: url("bloc.png") repeat; */
+  background-color:#191919;
+  color:white;
+}
+
+footer {
+  margin-top:2em;
+  padding:2em;
+}
+
+footer > a {
+  color:white;
+}
+
+details summary::-webkit-details-marker {
+  color: #FB4B1D;
+}
