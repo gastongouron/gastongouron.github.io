@@ -1,0 +1,112 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,400italic,500,500italic,700,900italic,700italic,900);
+
+
+html {
+font: 18px/1.4 "Roboto", sans-serif;
+text-align:left;
+}
+
+body {
+margin-top: 0px;
+margin-right: 0px;
+margin-left: 0px;
+margin-bottom: 0px;
+color:#191919;
+}
+
+h1 {
+text-align:center;
+margin-top:0px;
+padding-top:1em;
+}
+
+table {
+width:100%;
+color: #333;
+font-family: Helvetica, Arial, sans-serif;
+width: 640px;
+/* Table reset stuff */
+
+border-collapse: collapse; border-spacing: 0;
+}
+
+td, th {  border: 0 none; height: 30px; }
+
+th {
+/* Gradient Background */
+padding:6px;
+background: linear-gradient(#333 0%,#444 100%);
+color: #FFF; font-weight: bold;
+height: 40px;
+}
+
+td { background: #FAFAFA;   padding:6px;}
+
+/* Zebra Stripe Rows */
+
+tr:nth-child(even) td { background: #EEE; }
+tr:nth-child(odd) td { background: #FDFDFD; }
+
+/* F<
+
+/* Add border-radius to specific cells! */
+
+a{
+text-decoration: none;
+font-weight: bold;
+color:#FB4B1D;
+}
+
+img {
+display:block;
+margin:auto;
+}
+
+.column-1 {
+padding-left: 2em;
+padding-right: 2em;
+display:table-cell;
+width:50%;
+border-right:4px solid #921C00;
+border-right-style: dashed;
+}
+
+.column-2 {
+padding-left: 2em;
+padding-right: 2em;
+display:table-cell;
+width:50%;
+border-left:4px solid #921C00;
+border-left-style: dashed;
+}
+
+header > p {
+padding-left:2em;
+padding-right:2em;
+padding-bottom:2em;
+}
+
+header, footer {
+/*  background: url("bloc.png") repeat; */
+
+background: -webkit-linear-gradient(90deg, #232526 10%, #414345 90%); /* Chrome 10+, Saf5.1+ */
+background:    -moz-linear-gradient(90deg, #232526 10%, #414345 90%); /* FF3.6+ */
+background:     -ms-linear-gradient(90deg, #232526 10%, #414345 90%); /* IE10 */
+background:      -o-linear-gradient(90deg, #232526 10%, #414345 90%); /* Opera 11.10+ */
+background:         linear-gradient(90deg, #232526 10%, #414345 90%); /* W3C */
+
+color:white;
+}
+
+footer {
+margin-top:2em;
+padding:2em;
+}
+
+footer > a {
+color:white;
+}
+
+details summary::-webkit-details-marker {
+color: #FB4B1D;
+}

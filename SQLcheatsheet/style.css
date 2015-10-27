@@ -54,7 +54,14 @@ header > p {
 
 header, footer {
 /*  background: url("bloc.png") repeat; */
-  background-color:#191919;
+
+
+  background: -webkit-linear-gradient(90deg, #921C00 10%, #FB4B1D 90%); /* Chrome 10+, Saf5.1+ */
+  background:    -moz-linear-gradient(90deg, #8E0E00 10%, #1F1C18 90%); /* FF3.6+ */
+  background:     -ms-linear-gradient(90deg, #8E0E00 10%, #1F1C18 90%); /* IE10 */
+  background:      -o-linear-gradient(90deg, #8E0E00 10%, #1F1C18 90%); /* Opera 11.10+ */
+  background:         linear-gradient(90deg, #8E0E00 10%, #1F1C18 90%); /* W3C */
+
   color:white;
 }
 
