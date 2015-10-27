@@ -1,11 +1,4 @@
-<!--
-Write your names here:
-1. Paul Gaston Gouron
-2. Lorena Mesa (No pair)
-We spent [0.5] hours on this challenge.
--->
-
-<!-- This challenge uses HTML5 syntax that may not be available in all browsers (It works in Chrome and Safari, from my testing. (<details> and<summary>). -->
+<!-- 8.6 SQL Cheatsheet -->
 
 <!DOCTYPE html>
 <html lang="en">
@@ -48,34 +41,34 @@ We spent [0.5] hours on this challenge.
         <summary><code>CREATE TABLE "table_name" ("col1" "data_col1", "col2" "data_col2")</code><br><br></summary>
         <p>Create a table in database</p>
 
- <table style=" width:100%">
-        <thead>
-          <tr>
-            <th>Data Type</th>
-            <th>Description</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>integer(size)<br>int(size)<br>smallint(size)<br>tinyint(size)<br></td>
-            <td>Hold integers only. The maximum number of digits are specified in parenthesis.</td>
-          </tr>
-          <tr>
-            <td>decimal(size,d)<br>numeric(size,d)<br></td>
-            <td>Hold numbers with fractions. The maximum number of digits are specified in "size". The maximum number of digits to the right of the decimal is specified in "d".</td>
-          </tr>
+        <table style=" width:100%">
+          <thead>
             <tr>
-            <td>char(size)<br></td>
-            <td>Holds a fixed length string (can contain letters, numbers, and special characters). The fixed size is specified in parenthesis.</td>
-          </tr>
+              <th>Data Type</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
             <tr>
-            <td>varchar(size)<br></td>
-            <td>Holds a variable length string (can contain letters, numbers, and special characters). The maximum size is specified in parenthesis.</td>
-          </tr>
+              <td>integer(size)<br>int(size)<br>smallint(size)<br>tinyint(size)<br></td>
+              <td>Hold integers only. The maximum number of digits are specified in parenthesis.</td>
+            </tr>
             <tr>
-            <td>date(yyyymmdd)<br></td>
-            <td>Holds a date</td>
-          </tr>
+              <td>decimal(size,d)<br>numeric(size,d)<br></td>
+              <td>Hold numbers with fractions. The maximum number of digits are specified in "size". The maximum number of digits to the right of the decimal is specified in "d".</td>
+            </tr>
+            <tr>
+              <td>char(size)<br></td>
+              <td>Holds a fixed length string (can contain letters, numbers, and special characters). The fixed size is specified in parenthesis.</td>
+            </tr>
+            <tr>
+              <td>varchar(size)<br></td>
+              <td>Holds a variable length string (can contain letters, numbers, and special characters). The maximum size is specified in parenthesis.</td>
+            </tr>
+            <tr>
+              <td>date(yyyymmdd)<br></td>
+              <td>Holds a date</td>
+            </tr>
           </tbody>
         </table>
 
@@ -300,169 +293,130 @@ We spent [0.5] hours on this challenge.
 <!-- Column2 -->
 <section class="column-2">
 
-<article>
+  <article>
     <h2>ALIAS</h2>
     <p>Column and table <a href="http://www.w3schools.com/sql/sql_alias.asp">alias</a></p>
 
-  <details>
-        <summary><code>SELECT column_name AS column_alias FROM table_name</code>
-        </summary>
-        <p>Column name alias</p>
-      </details>
-
-</article>
-
-  <details>
-        <summary><code>SELECT table_alias.column_name FROM table_name AS table_alias</code>
-        </summary>
-        <p>Table name alias</p>
-      </details>
-</article>
-
-<article>
-    <h2>JOIN</h2>
-    <p>Return matches</a></p>
-
-  <details>
-        <summary><code>SELECT column_1_name, column_2_name, ...<br>
-&nbsp;&nbsp;FROM first_table_name<br>
-&nbsp;&nbsp;INNER JOIN second_table_name<br>
-&nbsp;&nbsp;ON first_table_name.keyfield = <br>
-&nbsp;&nbsp;second_table_name.foreign_keyfield</code>
-        </summary>
-        <p>The <b>INNER JOIN</b> returns all rows from both tables where there is a match. If there are rows in first table that do not have matches in second table, those rows will not be listed.</p>
-      </details><br>
-
-
-  <details>
-        <summary><code>SELECT column_1_name, column_2_name, ...<br>
-&nbsp;&nbsp;FROM first_table_name<br>
-&nbsp;&nbsp;LEFT JOIN second_table_name<br>
-&nbsp;&nbsp;ON first_table_name.keyfield =<br>
-&nbsp;&nbsp;second_table_name.foreign_keyfield<br></code>
-        </summary>
-        <p>The <b>LEFT JOIN</b> returns all the rows from the first table, even if there are no matches in the second table. If there are rows in first table that do not have matches in second table, those rows also will be listed.</p>
-      </details><br>
-
-  <details>
-        <summary><code>SELECT column_1_name, column_2_name, ...<br>
-&nbsp;&nbsp;FROM first_table_name<br>
-&nbsp;&nbsp;RIGHT JOIN second_table_name<br>
-&nbsp;&nbsp;ON first_table_name.keyfield =<br>
-&nbsp;&nbsp;second_table_name.foreign_keyfield
-<br></code>
-        </summary>
-        <p>The <b>RIGHT JOIN</b> returns all the rows from the second table, even if there are no matches in the first table. If there had been any rows in second table that did not have matches in first table, those rows also would have been listed.</p>
-      </details>
-
-</article>
-
-<article>
-    <h2>UNION</h2>
-    <p>Select different values from two or more statements</p>
-
     <details>
-      <summary><code>SQL_Statement_1<br>
-        &nbsp;&nbsp;UNION<br>
-        &nbsp;&nbsp;SQL_Statement_2<br>
-      </code><br>
-    </summary>
-    <p>Select all different values from SQL_Statement_1 and SQL_Statement_2</p>
-  </details>
+      <summary><code>SELECT column_name AS column_alias FROM table_name</code>
+      </summary>
+      <p>Column name alias</p>
+    </details>
+
+  </article>
 
   <details>
-      <summary><code>SQL_Statement_1<br>
-        &nbsp;&nbsp;UNION ALL<br>
-        &nbsp;&nbsp;SQL_Statement_2<br>
-      </code>
+    <summary><code>SELECT table_alias.column_name FROM table_name AS table_alias</code>
     </summary>
-    <p>Select all values from SQL_Statement_1 and SQL_Statement_2</p>
+    <p>Table name alias</p>
+  </details>
+</article>
+
+<article>
+  <h2>JOIN</h2>
+  <p>Return matches</a></p>
+
+  <details>
+    <summary><code>SELECT column_1_name, column_2_name, ...<br>
+      &nbsp;&nbsp;FROM first_table_name<br>
+      &nbsp;&nbsp;INNER JOIN second_table_name<br>
+      &nbsp;&nbsp;ON first_table_name.keyfield = <br>
+      &nbsp;&nbsp;second_table_name.foreign_keyfield</code>
+    </summary>
+    <p>The <b>INNER JOIN</b> returns all rows from both tables where there is a match. If there are rows in first table that do not have matches in second table, those rows will not be listed.</p>
+  </details><br>
+
+
+  <details>
+    <summary><code>SELECT column_1_name, column_2_name, ...<br>
+      &nbsp;&nbsp;FROM first_table_name<br>
+      &nbsp;&nbsp;LEFT JOIN second_table_name<br>
+      &nbsp;&nbsp;ON first_table_name.keyfield =<br>
+      &nbsp;&nbsp;second_table_name.foreign_keyfield<br></code>
+    </summary>
+    <p>The <b>LEFT JOIN</b> returns all the rows from the first table, even if there are no matches in the second table. If there are rows in first table that do not have matches in second table, those rows also will be listed.</p>
+  </details><br>
+
+  <details>
+    <summary><code>SELECT column_1_name, column_2_name, ...<br>
+      &nbsp;&nbsp;FROM first_table_name<br>
+      &nbsp;&nbsp;RIGHT JOIN second_table_name<br>
+      &nbsp;&nbsp;ON first_table_name.keyfield =<br>
+      &nbsp;&nbsp;second_table_name.foreign_keyfield
+      <br></code>
+    </summary>
+    <p>The <b>RIGHT JOIN</b> returns all the rows from the second table, even if there are no matches in the first table. If there had been any rows in second table that did not have matches in first table, those rows also would have been listed.</p>
   </details>
 
 </article>
 
 <article>
-    <h2>SELECT INTO/IN</h2>
-    <p>Select from table(s) and insert to other tables(s)</p>
+  <h2>UNION</h2>
+  <p>Select different values from two or more statements</p>
 
-    <details>
-      <summary><code>SELECT column_name(s)<br>
-&nbsp;&nbsp;INTO new_table_name<br>
-&nbsp;&nbsp;FROM source_table_name<br>
-&nbsp;&nbsp;WHERE query<br>
-        </code><br>
+  <details>
+    <summary><code>SQL_Statement_1<br>
+      &nbsp;&nbsp;UNION<br>
+      &nbsp;&nbsp;SQL_Statement_2<br>
+    </code><br>
+  </summary>
+  <p>Select all different values from SQL_Statement_1 and SQL_Statement_2</p>
+</details>
+
+<details>
+  <summary><code>SQL_Statement_1<br>
+    &nbsp;&nbsp;UNION ALL<br>
+    &nbsp;&nbsp;SQL_Statement_2<br>
+  </code>
+</summary>
+<p>Select all values from SQL_Statement_1 and SQL_Statement_2</p>
+</details>
+
+</article>
+
+<article>
+  <h2>SELECT INTO/IN</h2>
+  <p>Select from table(s) and insert to other tables(s)</p>
+
+  <details>
+    <summary><code>SELECT column_name(s)<br>
+      &nbsp;&nbsp;INTO new_table_name<br>
+      &nbsp;&nbsp;FROM source_table_name<br>
+      &nbsp;&nbsp;WHERE query<br>
+    </code><br>
+  </summary>
+  <p>Select data from table(S) and insert it into another table.</p>
+</details>
+
+<details>
+  <summary><code>SELECT column_name(s)<br>
+    &nbsp;&nbsp;IN external_database_name<br>
+    &nbsp;&nbsp;FROM source_table_name<br>
+    &nbsp;&nbsp;WHERE query<br>
+  </code><br>
+</summary>
+<p>Select data from table(S) and insert it in another database.</p>
+</details>
+
+</article>
+
+<article>
+  <h2>CREATE VIEW</h2>
+  <p>Virtual tables based on defined statements</p>
+
+  <details>
+    <summary><code>CREATE VIEW view_name AS<br>
+      &nbsp;&nbsp;SELECT column_name(s)<br>
+      &nbsp;&nbsp;FROM table_name<br>
+      &nbsp;&nbsp;WHERE condition</code><br>
     </summary>
     <p>Select data from table(S) and insert it into another table.</p>
   </details>
 
-    <details>
-      <summary><code>SELECT column_name(s)<br>
-&nbsp;&nbsp;IN external_database_name<br>
-&nbsp;&nbsp;FROM source_table_name<br>
-&nbsp;&nbsp;WHERE query<br>
-        </code><br>
-    </summary>
-    <p>Select data from table(S) and insert it in another database.</p>
-  </details>
-
 </article>
-
-<article>
-    <h2>CREATE VIEW</h2>
-    <p>Virtual tables based on defined statements</p>
-
-    <details>
-      <summary><code>CREATE VIEW view_name AS<br>
-&nbsp;&nbsp;SELECT column_name(s)<br>
-&nbsp;&nbsp;FROM table_name<br>
-&nbsp;&nbsp;WHERE condition</code><br>
-    </summary>
-    <p>Select data from table(S) and insert it into another table.</p>
-  </details>
-
-</article>
-
-
-
-<!--
-<article>
-    <h2>TITLE</h2>
-    <p>Subtitle</a></p>
-
-    <details>
-      <summary><code><br>
-        &nbsp;&nbsp;<br>
-      </code>
-    </summary>
-    <p></p>
-    <ul>
-        <li><a href="https://windows.github.com">GitHub for Windows</a></li>
-        <li><a href="https://mac.github.com">GitHub for Mac</a></li>
-        <li><a href="http://git-scm.com">Git for All Platforms</a></li>
-      </ul>
-  </details>
-</article> -->
-
-
-
-  </section>
-
-  <footer>
-    This information is partially copied from <a href="http://www.cheat-sheets.org/sites/sql.su/">Cheat-sheets.org</a> and <a href="https://en.wikipedia.org/wiki/SQL">Wikipedia</a>.
-  </footer>
-<!--
-
-<p>Table of contents:<br>
-Database Manipulation (CREATE, DROP DATABASE),<br>
-Table Manipulation (CREATE, ALTER, DROP TABLE, Data Types),<br>
-Index Manipulation (CREATE, DROP INDEX),<br>
-Data Manipulation (INSERT, UPDATE, DELETE, TRUNCATE TABLE),<br>
-Select (SELECT, FROM, WHERE, ORDER BY, GROUP BY, HAVING, Operators, Aggregate functions),<br>
-Alias,<br>
-Join,<br>
-UNION,<br>
-SELECT INTO/IN,<br>
-CREATE VIEW.</p>
--->
+</section>
+<footer>
+  This information is partially copied from <a href="http://www.cheat-sheets.org/sites/sql.su/">Cheat-sheets.org</a> and <a href="https://en.wikipedia.org/wiki/SQL">Wikipedia</a>.
+</footer>
 </body>
 </html>
