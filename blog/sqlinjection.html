@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Gastons'Herald</title>
+  <meta charset="UTF-8">
+  <!-- Call stylesheet-->
+  <link rel="stylesheet" type="text/css" href="../stylesheets/default.css">
+  <link rel="stylesheet" type="text/css" href="../stylesheets/blog.css">
+  <script type="text/javascript" src="../scripts/jquery-1.11.3.min.js"></script>
+  <!-- Favicon -->
+  <link rel="icon" href="./imgs/heraldIcon.png" />
+</head>
+
+<body class="">
+  <main class="heraldArticleMain white contents">
+    <article>
+      <nav><a class="navItem" href="index.html">Gastons'Herald</a></nav>
+      <header>
+        <h1>SQL: Database attacks</h1>
+        <h2>What is an SQL injection?</h2>
+      </header>
+      <section class="info-inner">
+        <img src="imgs/post9.png" alt="Check image path please.">
+
+        <h3>SQL security</h3>
+        <p>SQL is a language used to query and administrate various databases systems. Database systems are used to provide backend functionalities to different types of web applications. An SQL injection attack is an attack that is aimed at "tricking" the original intent of the application by submitting attacker-supplied SQL statements directly to the backend database. A successful SQL injection exploit can allow the malicious attacker to access sensitive data from the database and modify database data (Insert, Update, Delete) or even execute administration operations on the database.</p>
+
+        <h3>SQL injections</h3>
+        <p>A SQL injection attack involves the alteration of SQL statements. In the case of a database built with insufficient input validation and improper construction of SQL statements in web applications, this base can be exposed to SQL injections. An SQL injection can generally be used for the following types of attacks:
+          <ul>
+            <li><b>Authentication Bypass:</b> This attack allows an attacker to log on to an application, potentially with admins privileges, without supplying a valid username and password.</li>
+            <li><b>Information Disclosure:</b> This attack allows an attacker to obtain, either directly or indirectly, sensitive information in a database.</li>
+            <li><b>Compromised Data Integrity:</b> This attack involves the alteration of the contents of a database.</li>
+            <li><b>Remote Command Execution:</b> Performing command execution through a database can allow an attacker to compromise the host operating system.</li>
+          </ul>
+        </p>
+
+        <h3>Authentification bypass example</h3>
+        <p>One of the many possible uses for SQL injection involves bypassing an application login process. Here is an example to illustrate a possible and basic scenario of a SQL injection attack. Imagine an HTML form that solicits login information from an application user such as:<br>
+        <img src="imgs/post9detail.png">
+          <code> &#60;form action="/bin/login" method=post></code><br>
+          <code>Username: &#60;input type=text name=username></code><br>
+          <code>Password: &#60;input type=password name=password></code></br>
+          <code>&#60;input type=submit value=Login></code><br><br>
+Here, when a user enters his information in the form and click on connect , the browser sends a string to the Web server that contains the user credentials. This string appears in the body of the HTTP or HTTPS POST request as:<br><br>
+          <code>username=submittedUser&password=submittedPassword</code><br><br>
+
+          An application with a vulnerable login process may accept the submitted information and use it as part of the following SQL statement, which locates a user profile that contains the submitted username and password:<br><br>
+          <code>SELECT * FROM Users WHERE (username = 'submittedUser'</code><br>
+          <code>AND password = 'submittedPassword');</code><br><br>
+
+          If an application accepts and processes user-supplied data without any validation (unless strict validation), an attacker could submit a maliciously crafted username and password. Consider the following string:<br><br>
+          <code>username=admin%27%29+--+&password=+</code><br><br>
+
+          Once this string is received and URL-decoded, the application will attempt to build a SQL statement using a username of <i>admin') --</i> and a password that consists of a single space. Placing these items into the previous SQL statement is percived by the database like:<br><br>
+
+          <code>SELECT * FROM Users WHERE (username = 'admin') -- AND password = ' ');</code><br><br>
+
+          Here, the attacker-crafted username changes the logic of the SQL statement to effectively remove the password check. In the above example, an attacker could successfully log in to the application using the admin account without knowledge of the password to that account. <br><br>Notes: The string of two dash characters (--) that appears in the crafted input is very important (it indicates to the database server that the remaining characters in the SQL statement are a comment and should be ignored). This capability is one of the most important tools that is available to an attacker and without it, it would be difficult to ensure that the malicious SQL statements were syntactically correct.
+        </p>
+
+        <h3>Before trying...</h3>
+        <p>SQL injection attacks allow attackers to spoof identity, do whatever you want with existing data, including destroying the data or make it otherwise unavailable by becoming administrators of the database server. <br><br>In many countries (including US) it is illegal to use this attack. You risk up to 6 months in jail for unauthorised access and up to 5 years if with intent to commit further offences.</p>
+
+        <h3>Usefull links</h3>
+        <p>Many informaton and examples of this article come from a much more complete <a class="navItem" href="http://www.cisco.com/web/about/security/intelligence/sql_injection.html">post</a> from Mike Schiffman is a member of the Applied Security Intelligence (ASI) organization at Cisco. For informational purposes, some SQL injection tutorial and cheat sheets can be found <a class="navItem" href="http://sql-security.blogspot.com/2013/12/cheatsheet-sql-injection.html<">here</a>, <a class="navItem" href="https://hotlearning.wordpress.com/2011/11/22/how-to-hack-website-using-sql-stringsql-injection/">here</a> and <a class="navItem" href="http://iamwhitehat0.blogspot.com/2011/10/simple-sql-injection-tutorial.html">here</a>.<br><br> Remember NOT to test SQL injection on live web applications otherwise you expose yourself to <a class="navItem" href="https://www.law.cornell.edu/uscode/text/18/1030">Fraud and related activity in connection with computers</a> laws. If you want to test SQL injection, <a class="navItem" href="http://sqlzoo.net/hack/">here</a> is a page where you can make a simulation of database injection.<br><br> Some other useful resources about SQL related web security, such as <a class="navItem" href="https://www.owasp.org/index.php/Main_Page">the Open Web Application Security Projet</a> and the <a class="navItem" href="https://www.owasp.org/index.php/Top_10_2013-T10">Top 10 threats of 2013</a>.
+        </p>
+      </section>
+
+      <br><h4 class="">Posted Wednesday, October 28 &mdash; 2015</h4><br><br>
+    </article>
+    <footer></footer>
+  </main>
+  <script src="./../scripts/random-color-blog.js"></script>
+</body>
+<script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+</html>
