@@ -7,7 +7,7 @@ $(document).ready(function () {
             $(this).css("color", colors[rand]);
         })
         .mouseout(function() {
-            $(this).css("color", "#191919");
+            $(this).css("color", "#3f4549");
         });
             $( "div.col" )
         .mouseover(function() {
@@ -23,7 +23,7 @@ $(document).ready(function () {
         })
         .mouseout(function() {
             $(this).css("background", "white");
-            $(this).css("color", "#212121");
+            $(this).css("color", "#3f4549");
         });
     });
 });
