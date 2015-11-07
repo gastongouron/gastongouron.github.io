@@ -21,12 +21,17 @@ nav {
 b {
   font-weight: 500;
 }
+
+pre.prettyprint {
+border: none !important;
+}
+
 pre {
-  background-color: white;
+  background-color: #f6f8f9;
   padding:1em;
-  border:1px solid black;
   border-radius: 5px;
-  color:#grey;
+  font-size: 0.9em;
+  line-height: 1.4em;
 }
 /* Responsive image with border radius */
 img {
@@ -53,7 +58,7 @@ main {
   position:inherit;
   max-width: 640px;
   margin:0 auto;
-  color: #212121;
+  color: #3f4549;
   padding-left:2em;
   padding-right:2em;
   line-height: 1.666em;
@@ -64,7 +69,7 @@ main {
   position:inherit;
   max-width: 640px;
   margin:0 auto;
-  color: #212121;
+  color: #3f4549;
   padding-left:1em;
   padding-right:1em;
   line-height: 1.666em;
@@ -107,7 +112,8 @@ h4 {
 
 /** Paragraph **/
 p {
-    font-size: 0.9em;
+    font-size: 0.8em;
+    letter-spacing: 0.015em;
     line-height: 1.6em;
     font-weight: 400;
     -webkit-margin-before: 0em;
@@ -178,7 +184,7 @@ article {
 
 /** Over effect **/
 .articleItem:hover {
-  color:#212121;
+  color:#3f4549;
   border-radius: 8px;
   transition: 0.3s;
 }
