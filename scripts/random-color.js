@@ -12,7 +12,6 @@ $(document).ready(function () {
             $( "div.col" )
         .mouseover(function() {
             $(this).css("background", colors[rand]);
-            //"linear-gradient(45deg, #f06, yellow)"//
         })
         .mouseout(function() {
             $(this).css("background", "white");
@@ -28,8 +27,3 @@ $(document).ready(function () {
         });
     });
 });
-
-
-//background: #f06;
-//background: linear-gradient(45deg, #f06, yellow);
-//min-height: 100%;

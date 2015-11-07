@@ -21,14 +21,15 @@ b {
   font-weight: 500; }
 
 pre.prettyprint {
-  border: none !important; }
+  border: none !important;
+  padding: 1em !important; }
 
 pre {
   background-color: #f6f8f9;
-  padding: 1em;
+  padding: 4em;
   border-radius: 5px;
   font-size: 0.9em;
-  line-height: 1.4em; }
+  line-height: 1.7em; }
 
 /* Responsive image with border radius */
 img {
@@ -100,7 +101,7 @@ h4 {
 p {
   font-size: 0.8em;
   letter-spacing: 0.015em;
-  line-height: 1.6em;
+  line-height: 1.7em;
   font-weight: 400;
   -webkit-margin-before: 0em;
   -webkit-margin-after: 0em;
@@ -112,7 +113,7 @@ p {
 ul {
   font-size: 0.8em;
   letter-spacing: 0.015em;
-  line-height: 1.6em;
+  line-height: 1.7em;
   font-weight: 400; }
 
 a {
