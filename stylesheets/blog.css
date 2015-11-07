@@ -109,6 +109,12 @@ p {
   -ms-word-break: keep-all;
   word-break: keep-all; }
 
+ul {
+  font-size: 0.8em;
+  letter-spacing: 0.015em;
+  line-height: 1.6em;
+  font-weight: 400; }
+
 a {
   position: relative;
   font-weight: 600;
