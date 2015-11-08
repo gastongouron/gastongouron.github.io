@@ -20,6 +20,11 @@ nav {
 b {
   font-weight: 500; }
 
+a {
+  text-decoration: none;
+  color: #3f4549;
+  transition: 0.3s ease-in; }
+
 pre.prettyprint {
   border: none !important;
   padding: 1em !important; }
