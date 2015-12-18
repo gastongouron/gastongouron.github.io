@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Gastons'Herald</title>
+  <meta charset="UTF-8">
+  <!-- Call stylesheet-->
+  <link rel="stylesheet" type="text/css" href="../stylesheets/default.css">
+  <link rel="stylesheet" type="text/css" href="../stylesheets/blog.css">
+  <script type="text/javascript" src="../scripts/jquery-1.11.3.min.js"></script>
+  <!-- Favicon -->
+  <link rel="icon" href="./imgs/heraldIcon.png" />
+</head>
+
+<body class="">
+  <main class="heraldArticleMain white contents">
+    <article>
+      <nav><a class="navItem" href="index.html">Gastons'Herald</a></nav>
+      <header>
+        <h1>Ruby: Objects collections</h1>
+        <h2>Arrays &amp; Hashes</h2>
+      </header>
+      <section class="info-inner">
+                  <img src="imgs/post3.png" alt="Check image path please.">
+        <h3>About collections in Ruby</h3>
+        <p>
+          In ruby, and probably wider in programming, there are many reasons why you will want to find, filter, organize and perform plenty other operations on objects that match a certain criteria. Ruby allows us to create those collections by letting us use “containers”. In ruby, the most common containers in which we will store that data and make it an accessible are the two built-in classes <b>hashes</b> & <b>arrays</b>.
+          <br>
+
+          <h3>An array is like a freight train!</h3>
+          <p>An array is an ordered collection of objects. That may sound weird, but my understanding or array can be compared to trains. The name of the array is the engine, and the objects contained inside it the wagons.</p>
+          <pre class="prettyprint lang-ruby">
+ engine = [wagon_1, wagon_2, wagon_3]</pre>
+            <p>In this collection structure you will be able to access every object of the collection using its index. The index is an integer that represents the location of the object in the array <i>(remember we start counting at 0, so the first item of your array will be <code>array=[0]</code> ).</i> An array can contain a multiple kind of objects such as integers, floats, strings, math operation, classes and even arrays!</p>
+</p>
+            <pre class="prettyprint lang-ruby">
+ wagon_1 = 'cat'
+ wagon_2 = 13.37
+ wagon_3 = (7*3).to_i
+
+ engine = [wagon_1, wagon_2, wagon_3]
+ engine.push([])  #=> ['cat', 13.37, 21, []]</pre>
+            <p>The interest of using an array is that you can access a large library of built-in methods in order to process the data of the array the way you want, adding <i>(or concat)</i>, extracting <i>(shift and pop)</i>, sorting, querying and transforming them in many different ways.</p>
+          <pre class="prettyprint lang-ruby">
+ engine[2]  #=> 21</pre>
+            <p>For more infos about arrays built-in methods, see <a href="http://docs.ruby-lang.org/en/2.0.0/Array.html">Official Arrays Ruby docs</a>.</p>
+
+
+            <h3>An hash is like an array...</h3>
+            <p>Like arrays, hashes are collections of objects but with some extra purposes. In fact, they works with a key/value pair principle that allows you to perform more complex filtering and sorting operations than with arrays. In hashes, the left value is connected to the right value with the <code>=></code> operator. Let's see what our engine array would look like if it was an hash:</p>
+            <pre class="prettyprint lang-ruby">
+ engine_hash = {
+   'wagon_1' => 'cat',
+   'wagon_2' => 13.37,
+   'wagon_3' => (7*3)
+ }</pre>
+            <p>Again, like arrays, hashes can be created, ordered and used in many different ways, they will become very handy every time you will have to work with informations that come in a <code>key => value</code> model because you can retrive the value simply by using the key, without iterating!</p>
+                        <pre class="prettyprint lang-ruby">
+ engine_hash['wagon_1'] #=> 'cat'</pre>
+          <p>For more infos about hashes built-in methods, see <a href="http://docs.ruby-lang.org/en/2.0.0/Hash.html">Official Hashes Ruby docs</a>.</p>
+          </section>
+          <br><br>
+          <p class="bott">Posted Thursday, October 1 &mdash; 2015</p>
+          <div id="disqus_thread"></div>
+                  <script>
+        var disqus_config = function () {
+        this.page.url = gastongouron.github.io/blog/arrays-hashes.html;
+        };
+        (function() {
+        var d = document, s = d.createElement('script');
+        s.src = '//pggoblog.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+        })();
+        </script>
+        </article>
+        <footer>&nbsp;</footer>
+      </main>
+
+<script src="./../scripts/random-color-blog.js"></script>
+<script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+<script src="./../scripts/ga.js"></script>
+</body>
+</html>

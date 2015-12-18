@@ -1,0 +1,74 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,400italic,500,500italic,700,900italic,700italic,900);
+
+html {
+  font: 18px/1.4 "Roboto", sans-serif;
+  text-align:left;
+  colot:#FF6B6B;
+}
+
+body {
+  margin-top: 0px;
+  margin-right: 0px;
+  margin-left: 0px;
+  margin-bottom: 0px;
+}
+
+h1 {
+  text-align:center;
+  margin-top:0px;
+  padding-top:1em;
+}
+
+a{
+  text-decoration: none;
+  font-weight: bold;
+  color:#FF6B6B;
+}
+
+img {
+  display:block;
+  margin:auto;
+}
+
+.column-1 {
+  padding-left: 2em;
+  padding-right: 2em;
+  display:table-cell;
+  width:50%;
+}
+
+.column-2 {
+  padding-left: 2em;
+  padding-right: 2em;
+  display:table-cell;
+  width:50%;
+  border-left:3px solid #FF6B6B;
+}
+
+header > p {
+  padding-left:2em;
+  padding-right:2em;
+  padding-bottom:2em;
+}
+
+header, footer {
+ background: -webkit-linear-gradient(90deg, #556270 10%, #FF6B6B 90%); /* Chrome 10+, Saf5.1+ */
+  background:    -moz-linear-gradient(90deg, #556270 10%, #FF6B6B 90%); /* FF3.6+ */
+  background:     -ms-linear-gradient(90deg, #556270 10%, #FF6B6B 90%); /* IE10 */
+  background:      -o-linear-gradient(90deg, #556270 10%, #FF6B6B 90%); /* Opera 11.10+ */
+  background:         linear-gradient(90deg, #556270 10%, #FF6B6B 90%); /* W3C */
+  color:white;
+}
+
+footer {
+  margin-top:2em;
+  padding:2em;
+}
+
+footer > a {
+  color:white;
+}
+
+details summary::-webkit-details-marker {
+  color: #FF6B6B;
+}

@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Gastons'Herald</title>
+  <meta charset="UTF-8">
+  <!-- Call stylesheet-->
+  <link rel="stylesheet" type="text/css" href="../stylesheets/default.css">
+  <link rel="stylesheet" type="text/css" href="../stylesheets/blog.css">
+  <script type="text/javascript" src="../scripts/jquery-1.11.3.min.js"></script>
+  <!-- Favicon -->
+  <link rel="icon" href="./imgs/heraldIcon.png" />
+</head>
+
+<body class="">
+  <main class="heraldArticleMain white contents">
+    <article>
+      <nav><a class="navItem" href="index.html">Gastons'Herald</a></nav>
+      <header>
+        <h1>Ruby: Classes</h1>
+        <h2>An article about classes and bananas</h2>
+      </header>
+      <section class="info-inner">
+                  <img src="imgs/post6.png" alt="Check image path please.">
+        <h3>What is a class?</h3>
+        <p>
+          In Ruby, everything is an object, whether strings, hashes, arrays or numbers, and these objects are instances of classes.</p>
+          <pre class="prettyprint lang-ruby">
+ “lovely bananas”.class
+ => String
+ Array.new.class
+ => Array</pre><p>
+          Just like Ruby recognizes those String and Array classes, you can create your own classes that have access to shared methods as well.</p>
+
+          <h3>When to use a class?</h3>
+          <p>When you start solving larger problems organization is key. As long as you work with methods that are independent of each other you won’t need classes but, when you want the same method to be run on different objects without having to make several if/else or case statements, you can think about using a class. Basically, classes helps to create new objects. They define two thing: What an object is (attributes) and  what the object can do (actions). So, let’s try to build a banana object with a class and see what we can do with it.</p>
+
+
+          <h3>The Banana Class</h3>
+          <p>For that you need a class structure, so first to create a class you have to use the keyword <code>class</code> followed by the name of your class starting with a capital letter.</p>
+
+          <pre class="prettyprint lang-ruby">
+ class Banana
+   #methods and variables go here
+ end
+</pre>
+            <p>Wait… What happens if I want to create a banana and treat it like a real object and make it behave in some way in the ruby world? What happens if I need 500 instances of this banana that will do different things like being eaten or going to the thrash? How classes help me with that? And the answer is…</p>
+
+            <h3>Class methods and instance variables</h3>
+            <p>So, classes generally holds at least one method to be initialized with. Here, we’re going to define a single method called initialize that holds basic information about our banana.</p>
+
+
+            <pre class="prettyprint lang-ruby">
+ Class Banana
+   def initialize
+     #Set up your banana attributes here
+   end
+ end
+
+ roger = Banana.new
+ p roger
+ => &lt;#Banana:0x007fd6d0832648&gt;
+</pre>
+    <p>Note: <code>.new</code> is also a class method, it means you can call it on the class and not specific instance of that class. When you call that method, it creates a new instance of the class and then run the special method in the class called #initialize which will make the class ready to use. <br><br>That weird string <code>&lt;#Banana:0x007fd6d0832648&gt;</code> is the position in the computer's memory that the banana object is stored in. If we want to define our banana a little better we have to pass some arguments into the intinialize method such as name days and color. Because I believe the default color of a banana is green it's possible to allocate banana default value green for the color argument.
+    </p>
+    <pre class="prettyprint lang-ruby">
+ class Banana
+   def initialize(name, days, color="Green")
+     @name = name
+     @days = days
+     @color = color # Default green!
+   end
+ end</pre>
+
+<p>Hence, if you pass variables when you create it with .new method, they will be available on #initialize method your banana would start by looking like something more "real".</p>
+    <pre class="prettyprint lang-ruby">
+ p roger = Banana.new("Roger the Youth", 1)
+ => #&lt;Banana: @name="Roger the Youth", @days=1, @color="Green"&gt;
+</pre>
+<p>
+  This banana starts to look at something but so far our class is not super useful. Maybe, we could add two methods, the first, taking no arguments and returning the days of our banana, and an other, taking days as integer in order to change our banana days?
+</p>
+    <pre class="prettyprint lang-ruby">
+ class Banana
+   def initialize(name, days, color="Green")
+     @name = name
+     @days = days
+     @color = color # Default green!
+   end
+
+   def check_days
+    @days
+   end
+
+   def change_days(days_as_integer)
+    @days = days_as_integer
+   end
+ end
+
+ roger = Banana.new("Roger the Youth", 1)
+ p roger.check_days
+ #=>1
+ p roger.change_days(2)
+ #=>2</pre>
+
+<h3>Getter and Setters</h3>
+<p>In fact, Ruby syntax provides a shorter way than those two methods to access and/or read and/or modify instance variables of a class, those are callet <code>attr</code>. You have the choice between tree different getters, they are <code>attr_reader</code>, <code>attr_writer</code> and <code>attr_accessor</code>. Their names are relatively transparents, one allows to read, one to write and one to do both. Most of the time you want to consider wisely which one to use in order to prevent data leaks. The code of previous example should be replace by something like:</p>
+    <pre class="prettyprint lang-ruby">
+ class Banana
+
+   attr_accessor :name, :days, :color
+
+    def initialize(name, days, color="Green")
+      @name = name
+      @days = days
+      @color = color # Default green!
+    end
+
+ end
+
+ roger = Banana.new("Roger the Youth", 1)
+ p roger.name
+ #=>"Roger the Youth"
+ p roger.days + 1
+ #=> 2
+ p roger.color
+ #=> "Green"</pre>
+<p>Getter and setters can be used to manipulate objects of a same class and processing it through different methods. This is why classes also provides...
+</p>
+
+<h3>Instance Methods</h3>
+<p>If you want to give your banana some actions, give it a method. Since these methods get called on an individual instance of the Banana class, they're called Instance Methods. Here we will define a <code>get_older</code> method that increments the age of my bananas by one day in order to know how old are the banana we have in our fridge and which one we should eat. (Hopefully, I care a lot about my banana's data, that's why I give them a name and keep track of their age and colors on a daily basis.)</p>
+    <pre class="prettyprint lang-ruby">
+ class Banana
+   @@starting_color = "Green"
+   attr_accessor :name, :days, :color
+
+     def initialize(name, days, color=@@starting_color)
+       @name = name
+       @days = days
+       @color = color # Default green thanks to @@starting_color!
+     end
+
+     def get_older
+       @days = @days + 1
+       if @days < 7
+         puts "I'm " + @@starting_color + " and " + @days.to_s +
+         " days old! I'm too young to die!"
+       elsif @days < 14
+         @color = "Yellow"
+         puts "I'm " + @color + " and " + @days.to_s +
+         " days old! I'm ready to die!"
+       else
+         @color = "Dark"
+         puts "I'm " + @color + " and " + @days.to_s +
+         " days old! I'll kill you if you eat me!"
+       end
+     end
+ end
+
+ roger = Banana.new("Roger the Youth", 1)
+ bob = Banana.new("Bob the yellow", 7, "Yellow")
+ jacques = Banana.new("Jacques the Rotten", 34, "Dark")
+
+ p roger.get_older
+ #=> "I'm Green and only 2 days old! I'm too young to die!"
+ p bob.get_older
+ #=> "I'm Yellow and 8 days old! I'm ready to die!"
+ p jacques.get_older
+ #=> "I'm Dark and 35 days old! I'll kill you if you eat me!"</pre>
+<p>As you can see the output is different for each banana, because each of these objects are  differents instances of the same banana class. Also, I noticed that it's time for Bob the Yellow to be eaten and for jacques the Rotten to go to the thrash. One last detail you may have noticed is the use of a <code>@@starting_color</code> class variable with a value set to "Green" by default. This class variable is used in the method argument to replace the string expression "Green" previously but can also be used in any other method of our class.</p>
+
+            <h3>More about classes</h3>
+            <p>
+              In brief: Classes are useful to use when you want to give methods to your data or have multiple instances of your data. Class methods have access to other class methods and class variables but don't have access to instance methods or instance variables. Instance methods can call other instance methods, instance variables, class methods, or class variables. For more informations about objects and classes see <a href="http://ruby-doc.org/core-2.2.3/Object.html">Official objects Ruby docs.</a></p>
+
+          </section>
+<br><br>
+        <p class="bott">Posted Friday, October 16 &mdash; 2015</p>
+          <div id="disqus_thread"></div>
+                  <script>
+        var disqus_config = function () {
+        this.page.url = gastongouron.github.io/blog/ruby-classes.html;
+        };
+        (function() {
+        var d = document, s = d.createElement('script');
+        s.src = '//pggoblog.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+        })();
+        </script>
+        </article>
+        <footer>&nbsp;</footer>
+      </main>
+     <script src="./../scripts/random-color-blog.js"></script>
+         <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+<script src="./../scripts/ga.js"> </script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+</body>
+</html>

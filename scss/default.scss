@@ -1,0 +1,239 @@
+/** SOME SASS VARIABLES **/
+$dark: #191919;
+
+/** FONTS **/
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,400italic,500,500italic,700,900italic,700italic,900);
+
+@font-face {
+    font-family: 'VistaSansOT-Black';
+    src: url('../fonts/VistaSansOT-Black.eot?#iefix') format('embedded-opentype'),  url('../fonts/VistaSansOT-Black.otf')  format('opentype'),
+    url('../fonts/VistaSansOT-Black.woff') format('woff'), url('../fonts/VistaSansOT-Black.ttf')  format('truetype'), url('../fonts/VistaSansOT-Black.svg#VistaSansOT-Black') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+html {
+    font-family: "Roboto", sans-serif;
+}
+
+/** Basic markup elements **/
+
+body {
+    margin: 0;
+    padding-right:8%;
+    padding-left:8%;
+    padding-top:6%;
+    color:$dark;
+}
+
+a {
+    text-decoration: none;
+    color:$dark;
+    transition: 0.3s ease-in;
+}
+
+a:hover {
+    transition:0.3s;
+}
+
+/** Name **/
+h1 {
+    letter-spacing: -0.023em;
+    font-weight: 900;
+    font-size: 10vw;
+    line-height: 1em;
+    font-family: 'VistaSansOT-Black' !important;
+
+}
+
+/** Description **/
+h2 {
+    font-size: 1.5rem;
+    font-weight: 500;
+    line-height: 1.5em;
+
+}
+
+/** Project Title **/
+h3 {
+    font-size: 1.5rem;
+    -webkit-margin-before: 0em;
+    -webkit-margin-after: 0em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    font-weight: 700;
+}
+
+/** Navigation & Project description **/
+p {
+    font-size: 0.875rem;
+    line-height: 1rem;
+    font-weight: 500;
+    -webkit-margin-before: 0em;
+    -webkit-margin-after: 0em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+}
+
+hr {
+
+    margin: 1em 1em;
+    border: solid #ddd;
+    border-width: 2px 0 0;
+}
+
+/** Custom js lust styles **/
+    ul#tabs {
+
+        margin: 0px 0 0 0;
+        padding: 0 0 0.3em 0;
+    }
+
+    ul#tabs li {
+        display: inline;
+        font-size: 0.88em;
+    }
+
+    div.tabContent.hide {
+    display: none;
+    }
+
+/** Font awesome custom icon size **/
+
+/** Main project list items **/
+.main {
+    line-height: 0.7em;
+}
+
+/** Title part of the item **/
+.project-title {
+    font-size: 0.83333em;
+    font-weight: 500;
+    line-height: 0.7em;
+    margin: auto;
+    position: absolute;
+
+}
+
+/** Icon part of the item **/
+.project-icon {
+    padding-right:10px;
+}
+
+/** Haha header class="header"? **/
+.header {
+    padding: 1em 1em;
+}
+
+/** Cancel magins for H1 and P if they are in header **/
+.header > h1,
+.header > p {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.row {
+    margin-top: 0em;
+    margin-bottom: 0em;
+}
+
+.col {
+    vertical-align: middle;
+    line-height: 1em;
+    padding-left:1em;
+    border-radius:5px;
+}
+
+/** Display table when screen width = 800px **/
+@media (min-width: 50em) {
+    .row { width: 100%; display: table; table-layout: fixed; }
+    .col { display: table-cell; }
+    .colresume { display: table-cell; }
+}
+
+@media (max-width: 479px) {
+    .colresume {
+        width: 100% !important;
+    }
+
+    .col {
+        width: 100% !important;
+    }
+}
+
+.date {
+    width:96px
+}
+
+.main {
+    padding-top:3em;
+    padding-bottom:3em;
+}
+
+.secondary {
+    padding-top:1em;
+    padding-bottom:1em;
+    line-height: 1.8em;
+}
+
+.footer {
+    padding-right: 1em;
+    padding-left: 1em;
+    padding-bottom:2.88em;
+}
+
+/** Helpful classes **/
+
+.debug {
+    border:2px solid red;
+}
+
+.left {
+    float:left;
+    padding-top: 5px;
+}
+
+.right {
+    float:right;
+}
+
+.circle {
+    border-radius:50%;
+}
+
+.profil {
+    max-width: 3.777em;
+}
+
+.col > div {
+    display: inline-block;
+}
+
+.project-title h3 {
+    margin: 0;
+    padding-top: 0.8em;
+}
+
+.col:hover {
+    transition: 0.3s;
+    color:white;
+}
+
+/** Transparent selection yay! **/
+::-moz-selection {
+    background: transparent;
+    text-shadow: none;
+}
+
+::selection {
+    background: transparent;
+    text-shadow: none;
+}
+
+/** Make my profil image dissapear when screen < 479 **/
+@media only screen and (max-width: 479px) {
+    #fade {
+        display: none;
+    }
+}
+

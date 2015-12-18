@@ -1,0 +1,76 @@
+/* You'll want to make the site responsive and nice looking here. Have fun!*/
+html {
+    font: 20px/1.5 "Helvetica Neue", sans-serif;
+}
+body {
+    margin: 0px;
+    margin-top: 0px;
+    margin-right: 0px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+}
+
+#wrapper {
+  text-align: left;
+  margin: 0px auto;
+  padding:0px;
+  margin:0px;
+  border:0;
+  width: 100%;
+  background-color:white;
+  color:black;
+  font-size: 1rem;
+}
+
+#side-a ul{
+  list-style-type:none;
+}
+
+a {
+  color:black;
+  text-decoration: none;
+}
+
+img {
+ width:80%;
+ display: block;
+ margin-right: auto;
+ margin-left: auto;
+ border-radius: 10px;
+}
+
+#header {
+  text-align: center;
+  margin: 0 0 0 0;
+  background: black;
+  color: white;
+}
+
+#side-a {
+padding:3rem;
+text-align: center;
+}
+
+#side-a li{
+  padding-top: 1rem;
+}
+
+#side-b {
+  float: right;
+  width: 150px;
+}
+
+#content, .reflection {
+  font-size: 1rem;
+  width: 80%;
+   display: block;
+ margin-right: auto;
+ margin-left: auto;
+}
+
+#footer {
+  margin-bottom: 20px;
+  text-align: center;
+  clear: both;
+  background: #A2A2A2;
+}

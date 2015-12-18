@@ -1,0 +1,55 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,700,300);
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'roboto', sans-serif;
+  font-weight: 300;
+  color:#191919;
+}
+
+h1 {
+  font-size: 3.4em;
+  padding-left:24px;
+  padding-top:0px;
+  line-height: 0.82em;
+  position: absolute;  color: rgba(25, 25, 25, 100); z-index: 1;
+}
+
+.spec {
+  letter-spacing: -1px;
+}
+
+a {
+  font-weight: 500;
+  text-decoration: none;
+  color:#191919;
+}
+
+p {
+  padding-left:24px;
+  padding-top:130px;
+  font-size: 0.8em;
+  font-family: 'roboto', sans-serif;
+  line-height: 1.2em;
+  position: absolute;  color: rgba(25, 25, 25, 100); z-index: 1;
+}
+
+.deathz {
+  font-weight: 700;
+  color:red;
+}
+
+.winz {
+  font-weight: 700;
+  color:blue;
+}
+
+canvas {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  margin: 0 auto;
+  padding: 0;
+  background-color: white;
+}
