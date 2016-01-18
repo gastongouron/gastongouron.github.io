@@ -359,4 +359,3 @@ Cars.push(CarSeven);
 resetCar();
 resetPlayer();
 gameLoop();
-
