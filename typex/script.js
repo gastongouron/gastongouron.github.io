@@ -1,4 +1,4 @@
-// prevent default backspace to return to previous page
+// Prevent default backspace to return to previous page
 $(document).on("keydown", function (e) {
     if (e.which === 8 && !$(e.target).is("input, textarea")) {
         e.preventDefault();
@@ -21,7 +21,7 @@ $("body").on("keypress", function(e) {
    pressed=e.timeStamp;
 });
 
-// just for backspace
+// Just for backspace
 $("body").on("keydown", function(e) {
     var lastguy = $( "span span:last-child" );
     console.log(lastguy);
@@ -32,7 +32,7 @@ $("body").on("keydown", function(e) {
 $("body").on("keyup", function(e) {
     if ( !pressed ) return;
 
-        // get duration of the key pressed event
+        // Get duration of the key pressed event
         var duration = ( e.timeStamp - pressed ) / 1000;
         console.log(duration);
 
