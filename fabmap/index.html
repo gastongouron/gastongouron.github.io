@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset=utf-8 />
+  <title></title>
+  <script src='https://api.tiles.mapbox.com/mapbox.js/v2.2.4/mapbox.js'></script>
+  <link href='https://api.tiles.mapbox.com/mapbox.js/v2.2.4/mapbox.css' rel='stylesheet' />
+  <style>
+    body { margin:0; padding:0;}
+    h2 { font-family: serif !important; }
+    h6 { font-family: serif !important; font-size: 10px !important; }
+    .map { position:absolute; top:0; bottom:0; width:100%; }
+  </style>
+</head>
+
+<body>
+<div id='map-tooltips-js' class='map'> </div>
+</body>
+<script>
+
+// Mapbox token goes here
+L.mapbox.accessToken = 'pk.eyJ1IjoiZmFiaWVuY2F0YWxhbm8iLCJhIjoiY2lvNXplajZ3MDA1Y3Yza25nZDVhZmc1ZyJ9.WKfQ6nGrMyxlX0vLmR_reQ';
+
+// Tooltips configuration
+var mapTooltipsJS = L.mapbox.map('map-tooltips-js', 'mapbox.streets-basic')
+  .setView([51.530724, -0.07861], 13);
+
+// Adding tooltips automatically
+var myLayer = L.mapbox.featureLayer().addTo(mapTooltipsJS);
+
+var drink = 'drink.png'
+var food = 'food.png'
+var music = 'music.png'
+var bar = 'bar.png'
+
+var One_name = 'KIPFERLTHE BEST AUSTRIAN CAFÉ'
+var One_address = '20 Camden Passage, London N1 8ED'
+var One_coordinates = [-0.103477,51.535158]
+var One_image = ''
+
+var Two_name = 'CAFÉ 338MY LOCAL BREAKFAST HANGOVER SPOT'
+var Two_address = '338 Bethnal Green Rd, London, UK E2 0AG'
+var Two_coordinates = [-0.063212,51.526500]
+var Two_image = ''
+
+var Three_name = 'DALSTON JAZZ BARMY BEST CASUAL & UNUSUAL FRIDAY NIGHT IN LONDON'
+var Three_address = '4 Bradbury St, London N16 8JN'
+var Three_coordinates = [-0.076353,51.548686]
+var Three_image = ''
+
+var Four_name = 'SAPONARA MY BEST TRIP TO ITALY IN LONDON'
+var Four_address = '23 Prebend St, London N1 8PF'
+var Four_coordinates = [-0.096328,51.536939]
+var Four_image = ''
+
+var Five_name = 'BISTROTHÈQUE MY LOCAL SUNDAY BRUNCH'
+var Five_address = '23-27 Wadeson St, London E2 9DR'
+var Five_coordinates = [-0.055945,51.534170]
+var Five_image = ''
+
+var Six_name = 'VINOTECAMY BEST LOCAL WINE BAR'
+var Six_address = '7 Saint John Street, London EC1M 4AA'
+var Six_coordinates = [-0.101915,51.520108]
+var Six_image = ''
+
+var Seven_name = 'CARAVAGGIO MY LOCAL NAPOLITAN RESTAURANT'
+var Seven_address = '107-112 Leadenhall St, London EC3A 4DP'
+var Seven_coordinates = [-0.080735,51.513584]
+var Seven_image = ''
+
+// Here comes the markers
+var geojson = [
+
+//marker1
+  {
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "coordinates": One_coordinates
+    },
+    "properties": {
+      "title": One_name,
+      "description": One_address,
+      "icon": {
+          "iconUrl": drink,
+          "iconSize": [50, 50], // size of the icon
+          "iconAnchor": [25, 25], // point of the icon which will correspond to marker's location
+          "popupAnchor": [0, -25], // point from which the popup should open relative to the iconAnchor
+          "className": "dot"
+      }
+    }
+  },
+
+  // marker2..
+  {
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "coordinates": Two_coordinates
+    },
+    "properties": {
+      "title": Two_name,
+      "description": Two_address,
+      "icon": {
+          "iconUrl": food,
+          "iconSize": [50, 50], // size of the icon
+          "iconAnchor": [25, 25], // point of the icon which will correspond to marker's location
+          "popupAnchor": [0, -25], // point from which the popup should open relative to the iconAnchor
+          "className": "dot"
+      }
+    }
+  },
+
+  // marker3..
+  {
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "coordinates": Three_coordinates
+    },
+    "properties": {
+      "title": Three_name,
+      "description": Three_address,
+      "icon": {
+          "iconUrl": bar,
+          "iconSize": [50, 50], // size of the icon
+          "iconAnchor": [25, 25], // point of the icon which will correspond to marker's location
+          "popupAnchor": [0, -25], // point from which the popup should open relative to the iconAnchor
+          "className": "dot"
+      }
+    }
+  },
+
+  // marker4..
+  {
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "coordinates": Four_coordinates
+    },
+    "properties": {
+      "title": Four_name,
+      "description": Four_address,
+      "icon": {
+          "iconUrl": food,
+          "iconSize": [50, 50], // size of the icon
+          "iconAnchor": [25, 25], // point of the icon which will correspond to marker's location
+          "popupAnchor": [0, -25], // point from which the popup should open relative to the iconAnchor
+          "className": "dot"
+      }
+    }
+  },
+
+  // marker5..
+  {
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "coordinates": Five_coordinates
+    },
+    "properties": {
+      "title": Five_name,
+      "description": Five_address,
+      "icon": {
+          "iconUrl": food,
+          "iconSize": [50, 50], // size of the icon
+          "iconAnchor": [25, 25], // point of the icon which will correspond to marker's location
+          "popupAnchor": [0, -25], // point from which the popup should open relative to the iconAnchor
+          "className": "dot"
+      }
+    }
+  },
+
+  // marker6..
+  {
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "coordinates": Six_coordinates
+    },
+    "properties": {
+      "title": Six_name,
+      "description": Six_address,
+      "icon": {
+          "iconUrl": bar,
+          "iconSize": [50, 50], // size of the icon
+          "iconAnchor": [25, 25], // point of the icon which will correspond to marker's location
+          "popupAnchor": [0, -25], // point from which the popup should open relative to the iconAnchor
+          "className": "dot"
+      }
+    }
+  },
+
+  // marker7..
+  {
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "coordinates": Seven_coordinates
+    },
+    "properties": {
+      "title": Seven_name,
+      "description": Seven_address,
+      "icon": {
+          "iconUrl": food,
+          "iconSize": [50, 50], // size of the icon
+          "iconAnchor": [25, 25], // point of the icon which will correspond to marker's location
+          "popupAnchor": [0, -25], // point from which the popup should open relative to the iconAnchor
+          "className": "dot"
+      }
+    }
+  },
+
+];
+
+// Set a custom icon on each marker based on feature properties.
+myLayer.on('layeradd', function(e) {
+  var marker = e.layer,
+    feature = marker.feature;
+  marker.setIcon(L.icon(feature.properties.icon));
+
+  var content = '<h2>'+ feature.properties.title+'<\/h2>' + '<h6>'+ feature.properties.description+'</h6>';
+  marker.bindPopup(content);
+});
+myLayer.setGeoJSON(geojson);
+mapTooltipsJS.scrollWheelZoom.disable();
+
+
+</script>
+
+</html>
