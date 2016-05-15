@@ -1,0 +1,99 @@
+@font-face {
+    font-family: 'euclid_flexbold';
+    src: url('font/euclidflex-bold-webfont.woff2') format('woff2'),
+         url('font/euclidflex-bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'euclid_flexbold_italic';
+    src: url('font/euclidflex-bolditalic-webfont.woff2') format('woff2'),
+         url('font/euclidflex-bolditalic-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'euclid_flexlight';
+    src: url('font/euclidflex-light-webfont.woff2') format('woff2'),
+         url('font/euclidflex-light-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'euclid_flexlight_italic';
+    src: url('font/euclidflex-lightitalic-webfont.woff2') format('woff2'),
+         url('font/euclidflex-lightitalic-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'euclid_flexmedium';
+    src: url('font/euclidflex-medium-webfont.woff2') format('woff2'),
+         url('font/euclidflex-medium-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'euclid_flexmedium_italic';
+    src: url('font/euclidflex-mediumitalic-webfont.woff2') format('woff2'),
+         url('font/euclidflex-mediumitalic-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'euclid_flexregular';
+    src: url('font/euclidflex-regular-webfont.woff2') format('woff2'),
+         url('font/euclidflex-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'euclid_flexitalic';
+    src: url('font/euclidflex-regularitalic-webfont.woff2') format('woff2'),
+         url('font/euclidflex-regularitalic-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'euclid_flexultralight';
+    src: url('font/euclidflex-ultralight-webfont.woff2') format('woff2'),
+         url('font/euclidflex-ultralight-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'euclid_flexultralight_italic';
+    src: url('font/euclidflex-ultralightitalic-webfont.woff2') format('woff2'),
+         url('font/euclidflex-ultralightitalic-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+body { margin:0; padding:0; font-family: euclid_flexbold !important}
+
+h2 { font-family: euclid_flexbold !important; }
+
+h6 { font-family: euclid_flexbold !important; font-size: 10px !important; }
+
+.map { position:absolute; top:0; bottom:0; width:100%; }
+
+.leaflet-bottom, .leaflet-right, .leaflet-left { display: none !important}
