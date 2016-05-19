@@ -11,12 +11,12 @@ var bar   = 'img/bar.png'
 
 var collection = [
                  ['CARAVAGGIO MY LOCAL NAPOLITAN RESTAURANT','107-112 Leadenhall St, London EC3A 4DP',              [-0.080735,51.513584], food],
-                 ['VINOTECAMY BEST LOCAL WINE BAR',          '7 Saint John Street, London EC1M 4AA',                [-0.101915,51.520108], drink],
-                 ['KIPFERLTHE BEST AUSTRIAN CAFÉ',           '20 Camden Passage, London N1 8ED',                    [-0.103477,51.535158], drink],
-                 ['BISTROTHÈQUE MY LOCAL SUNDAY BRUNCH',     '23-27 Wadeson St, London E2 9DR',                     [-0.055945,51.534170], drink],
-                 ['SAPONARA MY BEST TRIP TO ITALY IN LONDON','23 Prebend St, London N1 8PF',                        [-0.096328,51.536939], drink],
-                 ['DALSTON JAZZ BARMY BEST CASUAL & UNUSUAL FRIDAY NIGHT IN LONDON','4 Bradbury St, London N16 8JN',[-0.076353,51.548686], drink],
-                 ['CAFÉ 338MY LOCAL BREAKFAST HANGOVER SPOT','338 Bethnal Green Rd, London, UK E2 0AG',             [-0.063212,51.526500], drink],
+                 ['VINOTECAMY BEST LOCAL WINE BAR',          '7 Saint John Street, London EC1M 4AA',                [-0.101915,51.520108], bar],
+                 ['KIPFERLTHE BEST AUSTRIAN CAFÉ',           '20 Camden Passage, London N1 8ED',                    [-0.103477,51.535158], bar],
+                 ['BISTROTHÈQUE MY LOCAL SUNDAY BRUNCH',     '23-27 Wadeson St, London E2 9DR',                     [-0.055945,51.534170], bar],
+                 ['SAPONARA MY BEST TRIP TO ITALY IN LONDON','23 Prebend St, London N1 8PF',                        [-0.096328,51.536939], bar],
+                 ['DALSTON JAZZ BARMY BEST CASUAL & UNUSUAL FRIDAY NIGHT IN LONDON','4 Bradbury St, London N16 8JN',[-0.076353,51.548686], music],
+                 ['CAFÉ 338MY LOCAL BREAKFAST HANGOVER SPOT','338 Bethnal Green Rd, London, UK E2 0AG',             [-0.063212,51.526500], bar],
                  ];
 
 var geojson = [];
