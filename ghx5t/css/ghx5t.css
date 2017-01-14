@@ -86,6 +86,13 @@ a, a:hover, a:focus {
     text-transform: uppercase;	
 }
 
+.coming-soon {
+	text-transform: uppercase;
+	color: #F1F1F1;
+	padding-top: 100px;
+	font-size: 3rem;
+}
+
 .navbar-default .navbar-nav>li>a.active { 
     color: red;
 }
