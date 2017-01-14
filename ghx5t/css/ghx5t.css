@@ -1,0 +1,141 @@
+.block {
+    display: none;
+}
+
+.list span {
+    background: #77787b;
+    color: #fff;
+    display: block;
+    text-align: center;
+    padding: 15px;
+    min-height: 400px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.load-btn {
+	margin-top: 60px;
+	background-color: white;
+	padding: 10px;
+	border: 1px solid black;
+    margin: 0 auto;
+    text-align: center;
+    display: block;
+    color: black;
+    margin-bottom: 200px;
+    cursor: pointer;
+}
+
+a, a:hover, a:focus {
+	color: black;
+}
+
+.navbar-toggle {
+	border-radius: 0px;
+	border-color: black;
+}
+
+.navbar {
+	border-bottom: 1px solid black !important;
+}
+
+#myCarouselWrapper { border-bottom: 1px solid black}
+.carousel-inner {  overflow-y: hidden;}
+.carousel-inner .active.left { left: -25%; }
+.carousel-inner .next        { left:  25%; }
+.carousel-inner .prev    { left: -25%; }
+.carousel-control        { width:  4%; }
+.carousel-control.left,.carousel-control.right {margin-left:15px;background-image:none;}
+.carousel-inner .item-item {
+  padding:0!important;
+  border-left: 1px solid black;	
+}
+
+.navbar .navbar-nav {
+    display: inline-block;
+    float: none;
+}
+
+.navbar .navbar-collapse {
+    text-align: center;
+}
+
+.pre-head {
+	text-align: center;
+	font-size: 30px;
+	padding:30px;
+}
+
+.navbar-default {
+	background-color: #ffffff;
+	color: black;
+}
+
+.collapse.custom-navbar.navbar-collapse {
+	border-top: 1px solid black; 
+	border-color: black;
+}
+
+.navbar-nav>li>a {
+	padding-top: 11px;
+	font-size: 13px;
+	padding-bottom: 5px;
+	letter-spacing: 1px;
+    text-transform: uppercase;	
+}
+
+.navbar-default .navbar-nav>li>a.active { 
+    color: red;
+}
+
+.navbar-default .navbar-nav>li>a { 
+    color: black;
+}
+
+.video-content, .image-content-first {
+	margin-top: 32px;
+}
+
+.hack {
+	height: 131px;
+}
+
+.hack-sm {
+	height: 40px;
+}
+
+.hack-bot {
+	height: 40px;
+}
+
+.artist, .music, .events, .titles, .load-btn {
+	margin-top: 4px;
+	margin-bottom: 12px;	
+	font-size: 13px;
+	letter-spacing: 1px;
+	font-style: normal;
+	font-variant: normal;
+    text-transform: uppercase;
+}
+
+.contact {
+	letter-spacing: 1px;
+	font-style: normal;
+	font-variant: normal;
+    text-transform: uppercase;	
+}
+
+.contact-name {
+	padding-top: 10px;
+}
+
+.artist-block {
+	padding:10px;
+}
+
+.top-pad-30 {
+	padding-top: 30px;
+}
+
