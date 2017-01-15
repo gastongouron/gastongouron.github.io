@@ -1,0 +1,15 @@
+{"myObject": {
+		"JAVA": {
+		    "id": "JAVAsubj",
+		    "path": "json/data.json"
+		},
+		"C#": { 
+		    "id": "JAVAsubj",
+		    "path": "json/data1.json"
+		},
+		"C++": {
+		   "id": "JAVAsubj",
+		    "path": "json/data2.json"
+		}
+	}
+}

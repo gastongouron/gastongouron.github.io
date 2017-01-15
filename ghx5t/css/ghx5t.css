@@ -66,7 +66,8 @@ a, a:hover, a:focus {
 .carousel-control.left,.carousel-control.right {margin-left:15px;background-image:none;}
 .carousel-inner .item-item {
   padding:0!important;
-  border-left: 1px solid black;	
+  border-right: 1px solid black;	
+  border-left: 0px !important;
 }
 
 .navbar .navbar-nav {
@@ -162,4 +163,34 @@ a, a:hover, a:focus {
 
 .top-pad-30 {
 	padding-top: 30px;
+}
+
+img.grayscale {
+    filter: grayscale(100%); /* Standard CSS */
+    -webkit-filter: grayscale(100%); /* CSS for Webkit Browsers */
+//   filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale"); /* Firefox 3.5+ */
+    // filter: url(/elements/grayscale.svg#desaturate); /* Firefox 4-34 */
+    filter: gray;  /* Internet Explorer IE6-9 */
+    -webkit-filter: grayscale(1); /* Old WebKit Browsers */
+	-webkit-transition: all .4s ease-in-out;
+}
+
+img.grayscale:hover {
+    filter: grayscale(0%);
+    filter: none;
+    -webkit-filter: grayscale(0); /* Old WebKit */
+}
+
+#imaplayer {
+    position: fixed;
+    top: 0em;
+    left: 0em;
+    background-color: white;
+    padding: 10px;
+    z-index: 3000;
+}
+
+.event-date, .event-name {
+	font-size: 8px;
+	font-transform: uppercase;
 }
