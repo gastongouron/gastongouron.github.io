@@ -80,19 +80,19 @@ data = {
 			"href": 'www.google.com'
 		},
 		"album2": {
-			"image": 'http://placehold.it/300/FF0000/FFFFFF',
+			"image": 'http://placehold.it/500/FF0000/FFFFFF',
 			"href": 'www.google.com'
 		},
 		"album3": {
-			"image": 'http://placehold.it/300/FF0000/FFFFFF',
+			"image": 'http://placehold.it/500/FF0000/FFFFFF',
 			"href": 'www.google.com'
 		},
 		"album4": {
-			"image": 'http://placehold.it/300/FF0000/FFFFFF',
+			"image": 'http://placehold.it/500/FF0000/FFFFFF',
 			"href": 'www.google.com'
 		},
 		"album5": {
-			"image": 'http://placehold.it/300/FF0000/FFFFFF',
+			"image": 'http://placehold.it/500/FF0000/FFFFFF',
 			"href": 'www.google.com'
 		}												
 	},
