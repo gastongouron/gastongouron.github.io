@@ -1,3 +1,19 @@
+main > * {
+  display: none;
+}
+
+main > *:last-child {
+  display: block;
+}
+
+main > *:target {
+  display: block;
+}
+
+main > *:target ~ * {
+  display: none;
+}
+
 .block {
     display: none;
 }
@@ -93,8 +109,10 @@ a, a:hover, a:focus {
 	font-size: 3rem;
 }
 
-.navbar-default .navbar-nav>li>a.active { 
+.navbar-default .navbar-nav>li>a.active,
+.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover { 
     color: red;
+    background-color: white;
 }
 
 .navbar-default .navbar-nav>li>a { 
@@ -145,4 +163,3 @@ a, a:hover, a:focus {
 .top-pad-30 {
 	padding-top: 30px;
 }
-
