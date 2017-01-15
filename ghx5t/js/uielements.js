@@ -1,23 +1,23 @@
 switch(window.location.href.split('#')[1]) {
-    case 'the-default-view':
+    case 'home':
         $(".home-area").addClass('active');
         break;
-    case 'artist-view':
+    case 'artist':
         $(".artists-area").addClass('active');
         break;
-    case 'music-view':
+    case 'music':
         $(".music-area").addClass('active');
         break;
-    case 'vision-view':
+    case 'vision':
         $(".vision-area").addClass('active');
         break;
-    case 'events-view':
+    case 'events':
         $(".events-area").addClass('active');
         break;                          
-    case 'shop-view':
+    case 'shop':
         $(".shop-area").addClass('active');
         break;                        
-    case 'about-view':
+    case 'about':
         $(".about-area").addClass('active');
         break;                                                                                  
     default:
