@@ -270,30 +270,32 @@ function readyYoutube() {
 }
 readyYoutube();
 
-console.log(players)
-
 function onPlayerStateChange(event) {
 	for (var i = 0, len = widgets.length; i < len; i++) {
 	  widgets[i].pause();
 	}
 
-	console.log(event.data)
-
-    if (event.data == YT.PlayerState.PLAYING) {
-        var temp = event.target.a.src;
-        var tempPlayers = $("iframe.yt_players");
-        for (var i = 0; i < players.length; i++) {
+   //  if (event.data == YT.PlayerState.PLAYING) {
+   //      var temp = event.target.a.src;
+   //      var tempPlayers = $("iframe.yt_players");
+   //      for (var i = 0; i < players.length; i++) {
 			// var leg=$('#player'+i).attr("src");
-   			// $('#player'+i).attr("src",leg);
-   			// console.log('cool')
+   // 			$('#player'+i).attr("src",leg);
+   // 			console.log('cool')
 			// console.log(players[i].a.src)
 			// console.log(temp)
 			// console.log(players[i].a.src != temp)
 
-            if (players[i].a.src != temp) {
-            	players[i].stopVideo();
-	            console.log('paused!');
-            }
-        }
-    }
+   //          if (players[i].a.src != temp) {
+   //          	players[i].stopVideo();
+	  //           console.log('paused!');
+   //          }
+   //      }
+   //  }
 };
+
+$('#navbar').on('click', function() {
+	for (var i = 0; i < players.length; i++) {
+	   $('#player'+i)[0].contentWindow.postMessage('{"event":"command","func":"' + 'stopVideo' + '","args":""}', '*');    
+	}
+});

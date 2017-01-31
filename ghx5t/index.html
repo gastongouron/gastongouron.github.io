@@ -109,6 +109,7 @@
                 <div class="col-md-10 col-md-push-1 col-lg-8 col-lg-push-2 col-sm-12 col-xs-12">
                     <div class="top-pad-30">
                         <span class="titles">Latest Videos</span>
+                        <a id="stop" href="#">Stop</a>
                     </div>
                 </div>
             </div>
@@ -211,6 +212,12 @@
 <script>
  $('#navbar').on('click', 'a:not(.dropdown-toggle)', function(e) {
     $('#navbar.in').collapse('hide');
+});
+</script>
+<script>
+$('#navbar').on('click', function() {
+    //$('#popup-youtube-player').stopVideo();
+    $('#player0')[0].contentWindow.postMessage('{"event":"command","func":"' + 'stopVideo' + '","args":""}', '*');    
 });
 </script>
 </body>
