@@ -43,16 +43,16 @@ data = {
 				"href": 'https://www.youtube.com/embed/cBX80BCZsao'
 			},
 			"video2": { 
-				"href": 'https://www.youtube.com/embed/cBX80BCZsao'
+				"href": 'https://www.youtube.com/embed/geTgZcHrXTc'
 			},
 			"video3": { 
-				"href": 'https://www.youtube.com/embed/cBX80BCZsao'
+				"href": 'https://www.youtube.com/embed/geTgZcHrXTc'
 			},
 			"video4": { 
-				"href": 'https://www.youtube.com/embed/cBX80BCZsao'
+				"href": 'https://www.youtube.com/embed/geTgZcHrXTc'
 			},
 			"video5": { 
-				"href": 'https://www.youtube.com/embed/cBX80BCZsao'
+				"href": 'https://www.youtube.com/embed/geTgZcHrXTc'
 			},	
 		}
 	},
@@ -275,23 +275,21 @@ function onPlayerStateChange(event) {
 	  widgets[i].pause();
 	}
 
-   //  if (event.data == YT.PlayerState.PLAYING) {
-   //      var temp = event.target.a.src;
-   //      var tempPlayers = $("iframe.yt_players");
-   //      for (var i = 0; i < players.length; i++) {
-			// var leg=$('#player'+i).attr("src");
-   // 			$('#player'+i).attr("src",leg);
-   // 			console.log('cool')
-			// console.log(players[i].a.src)
-			// console.log(temp)
-			// console.log(players[i].a.src != temp)
+    if (event.data == YT.PlayerState.PLAYING) {
+        var temp = event.target.a.src;
+        var tempPlayers = $("iframe.yt_players");
+        for (var i = 0; i < players.length; i++) {
+   			console.log('cool')
+			console.log(players[i].a.src)
+			console.log(temp)
+			console.log(players[i].a.src != temp)
 
-   //          if (players[i].a.src != temp) {
-   //          	players[i].stopVideo();
-	  //           console.log('paused!');
-   //          }
-   //      }
-   //  }
+            if (players[i].a.src != temp) {
+            	players[i].stopVideo();
+	            console.log('paused!');
+            }
+        }
+    }
 };
 
 $('#navbar').on('click', function() {
