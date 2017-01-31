@@ -166,6 +166,11 @@ data = {
 			"photo": "http://placehold.it/200/000000/FFFFFF",
 			"position": "Designer"
 		},
+		"LEL": {
+			"email": "aurelie@ghx5t.com",
+			"photo": "http://placehold.it/200/000000/FFFFFF",
+			"position": "LOL"
+		}
 	}
 }
 
@@ -192,7 +197,6 @@ var counter 					= 0;
 
 for (var key in homeDataNews) {
  	var homeDataNew = homeDataNews[key];
-
  	$("#"+key).attr('src', homeDataNew.image);
  	$("#"+key).attr('href', homeDataNew.href);
 }
@@ -200,41 +204,96 @@ for (var key in homeDataNews) {
 for (var key in homeDataVideos) {
  	var homeDataVideo = homeDataVideos[key];
  	if (counter <= 1) {
- 		homeDataVideosMainHTML += '<div class="col-md-10 col-md-push-1 col-lg-8 col-lg-push-2 col-sm-12 col-xs-12"><div class="video-content embed-responsive embed-responsive-16by9"><iframe class="embed-responsive-item" src="'+homeDataVideo.href+'"></iframe></div></div>';
+ 		homeDataVideosMainHTML += '<div class="col-md-10 col-md-push-1 col-lg-8 col-lg-push-2 col-sm-12 col-xs-12"><div class="video-content embed-responsive embed-responsive-16by9"><iframe class="yt_players embed-responsive-item" id="'+'player'+counter+'" src="'+homeDataVideo.href+'?rel=0&wmode=Opaque&enablejsapi=1;showinfo=0;controls=0'+'"></iframe></div></div>';
  	} else {
- 		homeDataVideosSecondaryHTML += '<div class="col-md-10 col-md-push-1 col-lg-8 col-lg-push-2 col-sm-12 col-xs-12"><div class="video-content embed-responsive embed-responsive-16by9"><iframe class="embed-responsive-item" src="'+homeDataVideo.href+'"></iframe></div></div>';
+ 		homeDataVideosSecondaryHTML += '<div class="col-md-10 col-md-push-1 col-lg-8 col-lg-push-2 col-sm-12 col-xs-12"><div class="video-content embed-responsive embed-responsive-16by9"><iframe class="yt_players embed-responsive-item" id="'+'player'+counter+'" src="'+homeDataVideo.href+'?rel=0&wmode=Opaque&enablejsapi=1;showinfo=0;controls=0'+'"></iframe></div></div>';
  	}
  	counter +=1;
 }
-$(homeDataVideosMainHTML).appendTo("#home-videos-content-main");
-$(homeDataVideosSecondaryHTML).appendTo("#home-videos-content-secondary");
 
 for (var key in aboutData) {
  	var about = aboutData[key];
 	aboutHTML += '<div class="col-md-12 top-pad-30"><div class="media"><div class="media-center"><a href="#"><img class=" center-block img-responsivemedia-object img-circle" src="'+about.photo+'" height="60" alt="..."></a></div><div class="media-body contact-name"><span class="media-heading"><b>'+key+'</b></span><br><span>'+about.position+'</span><br><span><a href="mailto:'+about.email+'">'+about.email+'</a></span></div></div></div>';
 }
-$(aboutHTML).appendTo("#about-content");
 
 for (var key in artistsData) {
  	var artist = artistsData[key];
 	artistsHTML += '<div class="col-md-6 col-lg-6 col-sm-6 col-xs-12"><a target="_blank" href="'+artist.href+'"><img src="'+artist.image+'" class="grayscale img-responsive" alt="sry"></a><div class="artist"><span>'+key+'</span></div></div>';
 }
-$(artistsHTML).appendTo("#artists-content");
 
 for (var key in musicData) {
  	var music = musicData[key];
 	musicHTML += '<div class="col-md-4 col-lg-4 col-sm-4 col-xs-12"><a target="_blank" href="'+music.href+'"><img src="'+music.image+'" class="grayscale img-responsive" alt="sry"></a><div class="music"><span>'+key+'</span></div></div>';
 }
-$(musicHTML).appendTo("#music-content");
 
 for (var key in visionData) {
  	var vision = visionData[key];
 	visionHTML += '<div class="col-md-10 col-md-push-1 col-lg-8 col-lg-push-2 col-sm-12 col-xs-12"><div class="video-content embed-responsive embed-responsive-16by9"><iframe class="embed-responsive-item" src="'+vision.href+'"></iframe></div></div>';
 }
-$(visionHTML).appendTo("#vision-content");
 
 for (var key in eventsData) {
  	var events = eventsData[key];
 	eventsHTML += '<div class="col-md-3 col-lg-3 col-sm-3 col-xs-12"><a href="'+events.href+'"><img src="'+events.image+'" class="grayscale img-responsive" alt="sry"></img></a><div class="events event-name"><span>'+key+'</span><span class="pull-right event-date">'+events.date+'</span></div></div>';
 }
+
+$(homeDataVideosMainHTML).appendTo("#home-videos-content-main");
+$(homeDataVideosSecondaryHTML).appendTo("#home-videos-content-secondary");
+$(aboutHTML).appendTo("#about-content");
+$(artistsHTML).appendTo("#artists-content");
+$(musicHTML).appendTo("#music-content");
+$(visionHTML).appendTo("#vision-content");
 $(eventsHTML).appendTo("#events-content");
+
+
+var players = new Array();
+var widgets = [];
+
+$('iframe.scplayer').each(function (index, iframe) {
+  widgets.push(SC.Widget(iframe));
+});
+
+function readyYoutube() {
+    if((typeof YT !== "undefined") && YT && YT.Player){
+		var temp = $("iframe.yt_players")
+		console.log(temp.length)
+		for (var i = 0; i < temp.length; i++) {
+		    var t = new YT.Player($(temp[i]).attr('id'), {
+		        events: {
+		            'onStateChange': onPlayerStateChange
+		        }
+		    });
+		    players.push(t);
+		}
+    }else{
+        setTimeout(readyYoutube, 1000);
+    }
+}
+readyYoutube();
+
+console.log(players)
+
+function onPlayerStateChange(event) {
+	for (var i = 0, len = widgets.length; i < len; i++) {
+	  widgets[i].pause();
+	}
+
+	console.log(event.data)
+
+    if (event.data == YT.PlayerState.PLAYING) {
+        var temp = event.target.a.src;
+        var tempPlayers = $("iframe.yt_players");
+        for (var i = 0; i < players.length; i++) {
+			// var leg=$('#player'+i).attr("src");
+   			// $('#player'+i).attr("src",leg);
+   			// console.log('cool')
+			// console.log(players[i].a.src)
+			// console.log(temp)
+			// console.log(players[i].a.src != temp)
+
+            if (players[i].a.src != temp) {
+            	players[i].stopVideo();
+	            console.log('paused!');
+            }
+        }
+    }
+};

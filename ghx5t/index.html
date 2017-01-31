@@ -6,6 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
+    
+    <script type="text/javascript" src="http://w.soundcloud.com/player/api.js"></script>
+    <script type="text/javascript" src="http://www.youtube.com/player_api"></script>
+
     <title>GHX5T</title>
     <link rel="icon" type="image/png" href="ghost.png"/>
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -14,7 +18,7 @@
 </head>
 <body>
 <div id="imaplayer">
-    <iframe class="pull-left" width="100%" height="20" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/302662504&amp;color=ff5500&amp;auto_play=true&amp;hide_related=true&amp;show_comments=false&amp;show_user=false&amp;show_reposts=false"></iframe>
+    <iframe class="scplayer pull-left" width="100%" height="20" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/302662504&amp;color=ff5500&amp;auto_play=true&amp;hide_related=true&amp;show_comments=false&amp;show_user=false&amp;show_reposts=false"></iframe>
 </div>
     <nav id="custom-nav" class="navbar navbar-default navbar-fixed-top" role="navigation">
         <div class="pre-head hidden-xs">
@@ -40,7 +44,7 @@
                 </a>
             </div>
         </div>
-        <div class="collapse custom-navbar navbar-collapse" id="navbar">
+        <div class="collapse custom-navbar navbar-collapse navbar-collapse" id="navbar">
             <ul class="nav navbar-nav">
                 <li class="home-area" ><a href="#home">Home</a></li>
                 <li class="artists-area" ><a href="#artists">Artists</a></li>
@@ -204,7 +208,11 @@
 <script src="js/loadmorecustom.js"></script>
 <script src="js/carousselcustom.js"></script>
 <script src="js/uielements.js"></script>
-
+<script>
+ $('#navbar').on('click', 'a:not(.dropdown-toggle)', function(e) {
+    $('#navbar.in').collapse('hide');
+});
+</script>
 </body>
 
 </html>
